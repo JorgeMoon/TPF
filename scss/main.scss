@@ -1,0 +1,18 @@
+// Todos mis imports
+@import 'scss/components/variables';
+
+/* PAGE */
+@import 'scss/layout/pageHome';
+
+
+/* COMPONENTS */
+@import 'scss/components/sidebar';
+/* Estilos Principales */
+/* CARD */
+
+.card{
+    width: 16rem;
+    .imgCard{
+        height: 18rem;
+    }
+}

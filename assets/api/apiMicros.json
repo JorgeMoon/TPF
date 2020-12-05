@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 4000,
+      "id": 1,
+      "title": "Micro-AMD1",
+      "imagen": "https://picsum.photos/id/0/600"
+    },
+    {
+      "precio": 3000,
+      "id": 2,
+      "title": "Micro-AMD2",
+      "imagen": "https://picsum.photos/id/10/600"
+    },
+    {
+      "precio": 8000,
+      "id": 3,
+      "title": "Micro-INTEL1",
+      "imagen": "https://picsum.photos/id/20/600"
+    },
+    {
+      "precio": 2500,
+      "id": 4,
+      "title": "Micro-INTEL2",
+      "imagen": "https://picsum.photos/id/30/600"
+    },
+    {
+      "precio": 1510,
+      "id": 5,
+      "title": "Micro-AMD3",
+      "imagen": "https://picsum.photos/id/40/600"
+    },
+    {
+      "precio": 6150,
+      "id": 6,
+      "title": "Micro-INTEL3",
+      "imagen": "https://picsum.photos/id/50/600"
+    }
+  ]

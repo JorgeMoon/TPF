@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Armar presupuesto de tu computadora seleccionando los componentes">
+    <meta name="author" content=" Damian Gamarra">
+    <!-- Bootstrap V4.0 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    
+
+    <title>Armar PC</title>
+  </head>
+
+
+  <body>
+ 
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Sidebar</div>
+          <div class="list-group list-group-flush">
+              <a href="#micro" id="micro-tab" data-toggle="tab" aria-controls="micro" aria-selected="true" class="sideMenu list-group-item list-group-item-action bg-light">Microporcesadores</a>
+              <a href="#mother" id="mother-tab" data-toggle="tab" aria-controls="mother" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Motherboards</a>
+              <a href="#memoram" id="memoram-tab" data-toggle="tab" aria-controls="memoram" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Memoria Ram</a>
+              <a href="#grafica" id="grafica-tab" data-toggle="tab" aria-controls="grafica" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Grafica</a>
+              <a href="#refrig" id="refrig-tab" data-toggle="tab" aria-controls="refrig" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Refrigeracion</a>
+              <a href="#fuente" id="fuente-tab" data-toggle="tab" aria-controls="fuente" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Fuente</a>
+              <a href="#gabo" id="gabinete-tab" data-toggle="tab" aria-controls="gabo" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Gabinete</a>
+              <a href="#perif" id="perif-tab" data-toggle="tab" aria-controls="perif" aria-selected="false" class="sideMenu list-group-item list-group-item-action bg-light">Perifericos</a>
+            </div> 
+        </div>
+      <!-- /#sidebar-wrapper -->
+  
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <!-- NAV SUPERIOR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <button class="btn btn-info" id="menu-toggle"><i class="fa fa-sliders" aria-hidden="true"></i></button>
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="carrito.html">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-success" id="menu-toggle"  href="carrito.html" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </nav>
+
+        <!-- CONTENIDO -->
+        <div class="tab-content">
+            <!-- microprocesador -->
+          <div class="tab-pane active" id="micro" rol="tabpanel" aria-labelledby="micro-tab">
+            <div id="microContenido"></div> <!-- Probando generar HTML desde js -->
+            
+          </div>
+
+
+             <!-- mothers -->
+          <div class="tab-pane" id="mother" rol="tabpanel" aria-labelledby="mother-tab">
+            <div id="productosMothers" class="row"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+          </div>
+                  <!-- Template para Producto Mothers -->
+            <template id="templateProductosMothers">
+              <div class="col-12 col-md-4">
+                <div class="card m-3">
+                  <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Placa Madre</h5>
+                        <p class="card-text">$ <span>500</span></p>
+                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">
+                          <i class="fa fa-info" aria-hidden="true"></i> Detalle
+                        </a>
+                        <button href="#" class="btn btn-dark"><i class="fa fa-shopping-cart" aria-hidden="true"> Agregar</i></button>
+                    </div>
+                  </div>
+              </div>
+            </template>
+
+            
+
+            <!-- MODAL -->
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <h3>Lorem ipsum dolor si</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <!-- memo RAM -->
+          <div class="tab-pane" id="memoram" rol="tabpanel" aria-labelledby="memoram-tab">
+            <h1>ESTE ES UN RAM</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+          </div>
+            <!-- Grafica -->
+          <div class="tab-pane" id="grafica" rol="tabpanel" aria-labelledby="grafica-tab">
+            <h1>ESTE ES UN GRAFICA</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+          </div>
+            <!-- GRefrigeracion-->
+          <div class="tab-pane" id="refrig" rol="tabpanel" aria-labelledby="refrig-tab">
+            <h1>ESTE ES UN ReFRIGeRACIOn</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+          </div>         
+            <!-- Fuentes-->
+          <div class="tab-pane" id="fuente" rol="tabpanel" aria-labelledby="fuente-tab">
+            <h1>ESTE ES UN ReFRIGeRACIOn</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+          </div>
+            <!-- Gabinete-->
+          <div class="tab-pane" id="gabo" rol="tabpanel" aria-labelledby="gabo-tab">
+            <h1>ESTE ES UN ReFRIGeRACIOn</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+          </div>
+            <!-- Perifericos-->
+            <div class="tab-pane" id="perif" rol="tabpanel" aria-labelledby="perif-tab">
+              <h1>ESTE ES UN ReFRIGeRACIOn</h1>
+              <h3>Lorem ipsum dolor sit amet.</h3>
+            </div>    
+      <!-- /#page-content-wrapper -->
+  
+    </div>
+    <!-- /#wrapper -->
+
+    
+<!-- CARRITO (Luego pasar a otro html) -->
+<div class="container mt-3">
+  <h4 class="text-center">Carrito de compras</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Acción</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody id="items">      <!-- Aca van los productos del carrito -->
+    </tbody>
+    <tfoot>
+      <tr id="footer">
+        <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  
+      <!-- TEMPLATES -->
+    <!-- Template body Tabla -->
+<template id="templateCarrito">
+  <tr>
+    <th scope="row">id</th>
+    <td>AMD</td>
+    <td>1</td>
+    <td>
+        <button class="btn btn-info btn-sm">
+            +
+        </button>
+        <button class="btn btn-danger btn-sm">
+            -
+        </button>
+    </td>
+    <td>$ <span>500</span></td>
+  </tr>
+</template>
+
+
+      <!-- Template Footer de TABLA -->
+<template id="templateFooter">
+  <th scope="row" colspan="2">Total productos</th>
+  <td>10</td>
+  <td>
+      <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+          vaciar todo
+      </button>
+  </td>
+  <td class="font-weight-bold">$ <span>5000</span></td>
+</template>
+
+
+</div>
+
+   
+    <!-- Bootstrap V4.0 -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script> 
+    
+    <script src="app.js"></script> <!-- defer => paraque se lea el script de forma diferida -->
+  
+  </body>
+</html>
