@@ -3,6 +3,9 @@
     /* Verificar si ya se cargo HTML */
     //DOMContentLoaded se dispara cuando el HTML esta completamente cargado
    // document.addEventListener('DOMContentLoaded', e => { fetchData() });
+
+let articulosAcumulados = 0;
+
    document.addEventListener("DOMContentLoaded", function(e) {
     fetchData();
     console.log("DOM cargado");
@@ -67,17 +70,20 @@ const pescarBtnAgregar = data => {
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
                 console.log("entro al if")
                 producto.cantidad++;                    //incremento cantidad de producto
+                
                    // console.log(producto.cantidad)
                     //console.log(carrito)    
             }
             else{
                // console.log("entro al else")
-                producto.cantidad = Number(1);      
+                producto.cantidad = Number(1);
+                
             }
             carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad
                 //console.log(producto.cantidad)      
            // console.log(carrito)     
             cargarCarrito();
+            
         })
     })
 }
@@ -106,23 +112,27 @@ let items = document.querySelector('#items')
 const cargarCarrito = () =>{
     const template = document.querySelector('#templateCarrito').content; //accedemos al contenido del 
     const fragment = document.createDocumentFragment();
+    
 
         items.innerHTML = ""; //---> limpio para luego reescribir
+        articulosAcumulados=0;
     //posibilidad 1 -> trabajo sobre el objeto
      for (const key in carrito) {
         if (carrito.hasOwnProperty(key)){
 
             const element = carrito[key]   
             console.log(`elemento en el carrito--> ${element}`) 
-
+            
             template.querySelector('th').textContent = element.id;
             template.querySelectorAll('td')[0].textContent = element.title;
             template.querySelectorAll('td')[1].textContent = element.cantidad;
             template.querySelector('span').textContent = element.precio;
-
             const clone = template.cloneNode(true);
             fragment.appendChild(clone);
+            console.log(element.cantidad)
+            articulosAcumulados+=element.cantidad;
         }
+ 
         items.appendChild(fragment);
 
            //Posibilidad 2 -> tranasformo en array
@@ -138,6 +148,8 @@ const cargarCarrito = () =>{
  */
   //  items.appendChild(fragment);
 }
+    //articulosAcumulados+=articulosAcumulados;
+    notificar(articulosAcumulados)  //Notificar
     }
 
 
@@ -149,12 +161,19 @@ btnSwitch.addEventListener('click',() =>{
 } )
 
 /* NOTIFICACION SOBRE CARRITO */
-/* const notificacion =  document.getElementById('iconCarrito');
-notificacion.addEventListener('click',() =>{
+    function notificar(acumulado){
+        document.querySelector("span.notificacion").textContent = acumulado; 
+    }
+
+    /* CLICK SOBRE CARRITO */
+const notificacion =  document.getElementById('iconCarrito');
+    notificacion.addEventListener('click',() =>{
+
+        console.log("abri carrito")
     
 
 
-} ) */
+} )
  
 /* STEPPER */
 /* defino los pasos */
