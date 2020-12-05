@@ -1,0 +1,155 @@
+
+  /* FOOTER */
+  .footer
+      {
+        background-color:map-get($color-base, gray-dark);
+        padding:45px 0 20px;
+        font-size:15px;
+        line-height:24px;
+        color:map-get($color-base, gris);
+        h6
+        {
+          color:map-get($color-base,light);
+          font-size:16px;
+          text-transform:uppercase;
+          margin-top:5px;
+          letter-spacing:2px
+        }
+        a
+        {
+          color:map-get($color-base, gray-dark);
+          :hover
+            {
+              text-decoration:none;
+            }
+        }
+        .social-icons
+        {
+          text-align:right
+              a
+              {
+                width:40px;
+                height:40px;
+                line-height:40px;
+                margin-left:6px;
+                margin-right:0;
+                border-radius:100%;
+                background-color: map-get($color-base, gray-dark);
+              }
+        }
+
+
+
+}
+
+.copyright-text
+{
+  margin:0
+}
+
+
+
+@media (max-width:991px)
+{
+  .footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .footer
+  {
+    padding-bottom:0
+  }
+  .footer .copyright-text,.footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;
+  li
+  {
+    display:inline-block;
+    margin-bottom:4px
+  }
+  &.title
+  {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:map-get($color-base, gris);
+    font-weight:700;
+    font-size:13px
+  }
+  a{
+    background-color:map-get($color-base, light);
+    color:map-get($color-base, gris);
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+
+    &:active,  &:focus, &:hover{
+      color:map-get($color-base, light);
+    }
+    &.facebook 
+    {
+      &:hover
+      {
+        background-color: map-get($color-redes, fb);
+      }
+    }
+    &.twitter{
+
+      &:hover
+      {
+        background-color:map-get($color-redes, tt);
+      }
+    }
+    &.linkedin{
+      &:hover
+      {
+        background-color:map-get($color-redes, lk);
+      }
+    }
+    &.whatsapp{
+      &:hover
+      {
+        background-color:map-get($color-redes, wp);
+      }
+    }
+  }
+  &.size-sm {
+    a
+    {
+      line-height:34px;
+      height:34px;
+      width:34px;
+      font-size:14px
+    }
+  }
+}
+
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600px;
+  }
+}
+

@@ -1,0 +1,12 @@
+button{
+    background: map-get($color-base,$key:green ); /* color del boton fondo*/
+    outline: none;                  /* Para quitar borde chrome */
+
+.notificacion{                      
+        width: 18px;
+        height: 18px;
+         top: -10px !important; 
+         z-index:2;
+    }
+}
+ 

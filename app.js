@@ -124,9 +124,8 @@ const cargarCarrito = () =>{
             fragment.appendChild(clone);
         }
         items.appendChild(fragment);
-    }
 
-    //Posibilidad 2 -> tranasformo en array
+           //Posibilidad 2 -> tranasformo en array
  /*    Object.values(carrito).forEach(producto => {
         console.log(producto);
         template.querySelector('th').textContent = producto.id;
@@ -139,8 +138,35 @@ const cargarCarrito = () =>{
  */
   //  items.appendChild(fragment);
 }
+    }
 
 
+/* BOTON SWITCH */
+const btnSwitch =  document.querySelector('#switch');
+btnSwitch.addEventListener('click',() =>{
+    document.body.classList.toggle('dark');
+    btnSwitch.classList.toggle('active');  
+} )
+
+/* NOTIFICACION SOBRE CARRITO */
+/* const notificacion =  document.getElementById('iconCarrito');
+notificacion.addEventListener('click',() =>{
+    
+
+
+} ) */
+ 
+/* STEPPER */
+/* defino los pasos */
+let stepper2 = new Stepper(document.querySelector('#stepper2'), {
+    linear: false,
+    animation: true,
+    selectors: {
+    steps: '.step',
+    trigger: '.step-trigger',
+    stepper: '.bs-stepper'
+      }
+  })
 
 /* 
 //obtener ID unico

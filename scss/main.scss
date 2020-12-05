@@ -1,12 +1,36 @@
 // Todos mis imports
 @import 'scss/components/variables';
+@import 'scss/components/modoNocturna';
+@import 'scss/components/header';
+@import 'scss/components/footer';
+@import 'scss/components/stepper';
+@import 'scss/components/notificacion';
 
 /* PAGE */
 @import 'scss/layout/pageHome';
 
 
-/* COMPONENTS */
-@import 'scss/components/sidebar';
+  /* SOMBRAS */
+  $sombraDark: 10px 10px 20px rgba(170,170,170,0.16);
+  $sombraLight: 10px 10px 20px rgba(0,0,0,0.16);
+
+/* BODY */
+body
+{
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    background: map-get($map: $color-base, $key: light );
+    transition: 0.3 ease all;
+
+    &.dark{
+        background: map-get($map: $color-base, $key: dark );
+        background-position: center;
+        background-repeat: repeat;
+        background-attachment: fixed;
+}
+}
 /* Estilos Principales */
 /* CARD */
 
@@ -16,3 +40,4 @@
         height: 18rem;
     }
 }
+

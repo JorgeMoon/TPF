@@ -1,0 +1,51 @@
+
+/* SWITCH -- BOTON  MODO NOCTURNO */
+
+.switch{
+    background: map-get($color-base, gris ); /* color del boton fondo*/
+    border-radius: 10px;          /* radio grande */
+    border: none;                   /* quitar borde por defecto */
+    position: relative;             /* para cuando la bolita e */
+    cursor: pointer;                /* para la manito */
+    display: flex;
+    outline: none;                  /* Para quitar borde chrome */
+    &::after {                      /* Switch - como se ve */
+        content:"";                 
+        display: block;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        background: map-get($map: $color-base, $key:light-grey);
+        top: 0.1rem;/* Ubicando el boton */
+        left: 0.3rem;
+        right:unset;            /* NO seteada */
+        border-radius: 100px;
+        transition: 0.3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+    }
+    &.active{
+        
+        color:#fff;
+
+        &::after{
+            right: 0.3rem;
+            left:unset;
+        }
+        span{
+        
+        color:map-get($color-base,indigo );
+        
+        }
+    }
+
+    }
+    span{
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        display:block;
+        background: none;
+        color:map-get($color-base,gold ); /* color de icono */
+    
+    }
+
