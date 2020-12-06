@@ -98,8 +98,8 @@
   </div>
         <!-- PASOS -->
           <!-- Paso 1 -->
-  <div class="container">      
-    <div class="col-md-12 mt-5 pt-5 pb-4 text-center">
+  <div class="container-fluid align-content-center justify-content-center">      
+    <div class="m-5 p-5 text-center ">
       <h2>Arma tu PC Master Race</h2>
       <div id="stepper2" class="bs-stepper">
         <div class="bs-stepper-header">
@@ -145,8 +145,8 @@
             <h3 class="text-center">Microprocesador</h3>
 
                <!-- Producto mothers -->
-            <div class="tab-pane" id="mother" rol="tabpanel" aria-labelledby="mother-tab">
-              <div id="productosMothers" class="row"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+            <div class="" id="mother" rol="tabpanel" aria-labelledby="mother-tab">
+              <div id="productosMothers" class="grid-fluid"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
             </div>
               <!-- fin Producto mothers -->
 
@@ -184,9 +184,6 @@
     </div>
   </div>
    
-
-
-            
                   <!-- Template para Producto Mothers -->
             <template id="templateProductosMothers">
               <div class="col-12 col-md-4 ">
@@ -203,10 +200,8 @@
                   </div>
               </div>
             </template>
-
-            
-
-            <!-- MODAL -->
+     
+            <!-- MODAL Detalle -->
             <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -216,14 +211,8 @@
               </div>
             </div>
 
-
-
-
-
-
-  
-      <!-- TEMPLATES -->
-    <!-- Template body Tabla -->
+      <!-- TEMPLATES  CARRITO-->
+        <!-- body Tabla -->
 <template id="templateCarrito">
   <tr>
     <th scope="row">id</th>
@@ -241,8 +230,7 @@
   </tr>
 </template>
 
-
-      <!-- Template Footer de TABLA -->
+      <!--  Footer de TABLA -->
 <template id="templateFooter">
   <th scope="row" colspan="2">Total productos</th>
   <td>10</td>
@@ -257,20 +245,16 @@
 
 </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+                <!-- FOOTER -->
+    <footer class="footer d-flex align-content-center justify-content-center">
       
-                  <!-- SOCIAL -->
-                  <div class="col-12 mt-5">
-                      <ul class="social-icons">
-                          <li><a class="facebook" href="#"><i class="fab fa-facebook-messenger"></i></a></li>
-                          <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>
-                          <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
-                      </ul>
-                  </div>
-            
- 
+              <!--SOCIAL -->
+        <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fab fa-facebook-messenger"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+        </ul> 
     </footer>
    
     <!-- Bootstrap V4.0 -->

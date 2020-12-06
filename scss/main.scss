@@ -32,12 +32,18 @@ body
 }
 }
 /* Estilos Principales */
-/* CARD */
 
+/* CARD */
 .card{
     width: 16rem;
     .imgCard{
         height: 18rem;
     }
 }
+.grid-fluid{        /* cuadricula responsive */
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    text-align: center;
+}
 
+/* FIN CARD */
