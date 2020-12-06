@@ -11,13 +11,11 @@ let articulosAcumulados = 0;
     console.log("DOM cargado");
   });
 
- //let data = [];
-
 const fetchData = async() => {     //consumir json
     try{
-        const res = await fetch('assets/api/apiMothers.json');
+        const res = await fetch('assets/api/apiMicros.json');
         const data = await res.json();
-        //console.log(data);
+        console.log(res);
         writeCardHtml(data);
         pescarBtnAgregar(data);
         //pescarBtnDetalle(data);         
