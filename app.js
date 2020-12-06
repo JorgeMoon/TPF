@@ -121,7 +121,7 @@ const cargarCarrito = () =>{
         if (carrito.hasOwnProperty(key)){
 
             const element = carrito[key]   
-            console.log(`elemento en el carrito--> ${element}`) 
+           // console.log(`elemento en el carrito--> ${element}`) 
             
             template.querySelector('th').textContent = element.id;
             template.querySelectorAll('td')[0].textContent = element.title;
@@ -129,7 +129,7 @@ const cargarCarrito = () =>{
             template.querySelector('span').textContent = element.precio;
             const clone = template.cloneNode(true);
             fragment.appendChild(clone);
-            console.log(element.cantidad)
+            //console.log(element.cantidad)
             articulosAcumulados+=element.cantidad;
         }
  
@@ -148,7 +148,6 @@ const cargarCarrito = () =>{
  */
   //  items.appendChild(fragment);
 }
-    //articulosAcumulados+=articulosAcumulados;
     notificar(articulosAcumulados)  //Notificar
     }
 
@@ -162,17 +161,19 @@ btnSwitch.addEventListener('click',() =>{
 
 /* NOTIFICACION SOBRE CARRITO */
     function notificar(acumulado){
-        document.querySelector("span.notificacion").textContent = acumulado; 
+        document.querySelector("span.notificacion").textContent = acumulado;
     }
 
     /* CLICK SOBRE CARRITO */
 const notificacion =  document.getElementById('iconCarrito');
-    notificacion.addEventListener('click',() =>{
-
-        console.log("abri carrito")
-    
-
-
+    notificacion.addEventListener('click',(e) =>{
+       
+        if(articulosAcumulados!=0 || articulosAcumulados>0){
+            let x = document.getElementsByClassName("previoCarrito")[0];
+                x.setAttribute("id","carrito") 
+            //console.log("abri carrito")
+                notificacion.setAttribute("data-target","#carrito")
+        }
 } )
  
 /* STEPPER */

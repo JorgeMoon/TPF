@@ -10,3 +10,10 @@ button{
     }
 }
  
+.previoCarrito{
+    z-index:99;
+    position: fixed;
+     right:6rem; 
+    top: 80px;
+    background-color: map-get($color-base,$key:light-grey );;
+}

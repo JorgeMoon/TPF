@@ -54,9 +54,11 @@
           </div>
         </div>
 
-        <button type="button" id="iconCarrito" class="btn btn-success mr-3">
-          <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion">2</span></i>  
+        <button type="button" id="iconCarrito" class="btn btn-success mr-3" data-toggle="collapse"  aria-expanded="false" aria-controls="collapseExample">
+          <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>  
         </button>
+
+       
         
         <button class="switch" id="switch">
           <span><i class="fas fa-moon"></i></span>
@@ -65,6 +67,34 @@
        
       </nav>                                
   </header>
+  <div class="collapse previoCarrito">
+    <div class="">
+          
+          <!-- CARRITO () -->
+      <div class="container mt-3">
+        <h4 class="text-center">Carrito de compras</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Acción</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items">      <!-- Aca van los productos del carrito -->
+          </tbody>
+          <tfoot>
+            <tr id="footer">
+              <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+  
+    </div>
+  </div>
         <!-- PASOS -->
           <!-- Paso 1 -->
   <div class="container">      
@@ -188,28 +218,7 @@
 
 
 
-    
-<!-- CARRITO (Luego pasar a otro html) -->
-<div class="container mt-3">
-  <h4 class="text-center">Carrito de compras</h4>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Item</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col">Acción</th>
-        <th scope="col">Total</th>
-      </tr>
-    </thead>
-    <tbody id="items">      <!-- Aca van los productos del carrito -->
-    </tbody>
-    <tfoot>
-      <tr id="footer">
-        <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
-      </tr>
-    </tfoot>
-  </table>
+
 
   
       <!-- TEMPLATES -->
