@@ -32,7 +32,7 @@ $.ajax({
         }, success: function(data){
             //alert(data);
             console.log(data.results)
-            writeCardHtml(data.results);
+            //writeCardHtml(data.results);
             //process the JSON data etc
         }
 })

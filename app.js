@@ -18,7 +18,10 @@ const fetchData = async() => {     //consumir json
         console.log(res);
         writeCardHtml(data);
         pescarBtnAgregar(data);
-        //pescarBtnDetalle(data);         
+        initToolTip();
+
+        //pescarBtnDetalle(data); 
+
     }
     catch (error){
         console.log(error);
@@ -64,7 +67,6 @@ const pescarBtnAgregar = data => {
 
             let producto = data.find(item => item.id === parseInt(btn.dataset.id));
 
-           // producto.cantidad=1;
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
                 console.log("entro al if")
                 producto.cantidad++;                    //incremento cantidad de producto
@@ -73,14 +75,14 @@ const pescarBtnAgregar = data => {
                     //console.log(carrito)    
             }
             else{
-               // console.log("entro al else")
+               console.log("entro al else")
                 producto.cantidad = Number(1);
                 
             }
             carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad
                 //console.log(producto.cantidad)      
            // console.log(carrito)     
-            cargarCarrito();
+            cargarBodyCarrito();
             
         })
     })
@@ -99,72 +101,146 @@ const pescarBtnDetalle = data => {
 //Objeto Carrito --> MODELO
 let carrito = {};
 
-/* carrito = {
-    1: {id:1, titulo: 'AMD', precio: 999, cantidad: 1},
-    2: {id:1, titulo: 'AMD', precio: 999, cantidad: 1},
-}  */
+let items = document.querySelector('#items') //Capturamos donde vamos a pintar el carrito.
 
-let items = document.querySelector('#items')
-
-
-const cargarCarrito = () =>{
-    const template = document.querySelector('#templateCarrito').content; //accedemos al contenido del 
-    const fragment = document.createDocumentFragment();
+const cargarBodyCarrito = () =>{
+    const template = document.querySelector('#templateBodyCarrito').content; //accedemos al contenido del "paso 1: crear template"
+    const fragment = document.createDocumentFragment(); //"paso 2: Crear fragment"
     
-
         items.innerHTML = ""; //---> limpio para luego reescribir
         articulosAcumulados=0;
     //posibilidad 1 -> trabajo sobre el objeto
      for (const key in carrito) {
-        if (carrito.hasOwnProperty(key)){
-
+        if (carrito.hasOwnProperty(key)){       //paso 3: pregunta si el objeto tiene el mismo ID
             const element = carrito[key]   
-           // console.log(`elemento en el carrito--> ${element}`) 
-            
+            console.log(carrito) 
+                    //paso 4: Aca voy escribiendo las partes de la tabla
             template.querySelector('th').textContent = element.id;
             template.querySelectorAll('td')[0].textContent = element.title;
             template.querySelectorAll('td')[1].textContent = element.cantidad;
-            template.querySelector('span').textContent = element.precio;
-            const clone = template.cloneNode(true);
-            fragment.appendChild(clone);
-            //console.log(element.cantidad)
-            articulosAcumulados+=element.cantidad;
-        }
+            template.querySelector('td span').textContent = element.precio*element.cantidad;    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
+               
+            //botones + y - <-- se le asigna el ID a cada boton en relacion al producto creado
+            template.querySelector('td button.btn-info').dataset.id = element.id;
+            template.querySelector('td button.btn-danger').dataset.id = element.id;
  
-        items.appendChild(fragment);
+            
+            const clone = template.cloneNode(true);     //paso 5: clonamos el template
+            fragment.appendChild(clone);                //paso 6: pasamos al fragment el clon
+            //console.log(element.cantidad)
+            articulosAcumulados+=element.cantidad; //voy acumular los articulos
+        }
+        items.appendChild(fragment);        //paso 7: hacemos el hijo del fragmen para pegar en el DOM.
+    }
+    notificar(articulosAcumulados);  //Notificar
+    cargarFooterCarrito() ;  ////Aca vamos a poner el total $ y total de Productos
+    btnAccionesCarrito();       //Botones del Carrito
+    btnVaciarCarrito();         //Botonera del footer del carrito
+}
 
-           //Posibilidad 2 -> tranasformo en array
- /*    Object.values(carrito).forEach(producto => {
-        console.log(producto);
-        template.querySelector('th').textContent = producto.id;
-        template.querySelectorAll('td')[0].textContent = producto.title;
-        template.querySelectorAll('td')[1].textContent = producto.cantidad;
-        template.querySelector('span').textContent = producto.precio;
+const footerCarrito = document.getElementById("footer") //ID donde voy a cargar
+const cargarFooterCarrito = () =>{              //Aca vamos a poner el total $ y total de Productos
+    const template = document.getElementById("templateFooterCarrito").content;
+    const fragment = document.createDocumentFragment();
+
+    footerCarrito.innerHTML ="";    //limpio para reescribir
+    
+    if (Object.keys(carrito).length === 0) {
+        footer.innerHTML = `
+        <th scope="row" colspan="5"></th>
+        `
+        return
+    }
+    //sumar cantidad y sumar totales
+        //primero tranformo en un array para poder usar el metodo reduce();
+        //reduce tiene dos parametros "acc"= acumulador y "cantidad"= items del array que se iterar
+        // (acc,{cantidad}) son los parametros de mi funcion flecha, al ser un array de objetos debo indicarle asi el items {cantidad}
+        // acc + cantidad <- aca le estoy diciendo a la funcion (en este caso es una suma, pero aca es donde indicamos que es lo que le vamos a pedir) 
+        //que vaya acumulando en acc lo que en cada iteracion hay en cantidad 
+        // es posible usar recude para ir acumulando, restando, sumando y el proceso de iteracion
+        // y con 0 <- le pido que me devuelva en un numero, si le indico {} <- le pido que me devuelva un objeto
+        const productosTotales = Object.values(carrito).reduce((acc,{cantidad}) => acc + cantidad, 0)
+        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,precio}) => acc+=cantidad*precio,0)
+        //console.log("productosTOtales"+productosTotales)
+        //console.log("productosTOtales"+preciosTotales)
+        console.log(productosTotales)
+        console.log(preciosTotales)
+    
+        //aca armamos lo que vamos a mostrar, con los template
+        template.querySelectorAll("td")[0].textContent = productosTotales;
+        template.querySelector("td span").textContent = preciosTotales;
         const clone = template.cloneNode(true);
         fragment.appendChild(clone);
-    })
- */
-  //  items.appendChild(fragment);
+
+        footerCarrito.appendChild(fragment);
 }
-    notificar(articulosAcumulados)  //Notificar
-    }
+        /* VACIAR CARRITO */
+const btnVaciarCarrito = () =>{
+    let btnVaciarCarrito = document.getElementById("vaciarCarrito");
+        btnVaciarCarrito.addEventListener("click",() =>{
+            carrito = {};
+            //console.log(carrito)
+          
+            notificar("")
+            items.innerHTML = "";
+            footerCarrito.innerHTML =""; 
+            
 
+        })
+}
+const btnAccionesCarrito = () =>{
 
-/* BOTON SWITCH */
+    const btnAgregar = document.querySelectorAll('#items td .btn-info')
+    const btnEliminar = document.querySelectorAll('#items td .btn-danger')
+
+        btnAgregar.forEach(btn =>{
+            btn.addEventListener("click", () =>{
+               // console.log("Agregar")
+                const producto = carrito[btn.dataset.id]        //btn.dataset.id -> es el ID que me trae el evento
+                producto.cantidad++;    //incremento
+                carrito[btn.dataset.id] = {...producto}         //Propago las propiedates
+                 //Actualizamos carrito
+                    cargarBodyCarrito();
+                    
+            })
+        })
+        btnEliminar.forEach(btn =>{
+            btn.addEventListener("click", () =>{
+                //console.log("Eliminar")
+                const producto = carrito[btn.dataset.id];      //btn.dataset.id -> es el ID que me trae el evento
+                producto.cantidad--;    //decremento
+                if(producto.cantidad === 0){
+                    //elimino el objeto creado con el ID
+                    delete carrito[btn.dataset.id];   
+                    console.log(carrito);
+
+                }
+                else{
+                    carrito[btn.dataset.id] = {...producto}         //Propago las propiedates
+                }
+                 //Actualizamos carrito
+                    cargarBodyCarrito();
+            })
+        })      
+}
+
+        /* BOTON SWITCH */
 const btnSwitch =  document.querySelector('#switch');
 btnSwitch.addEventListener('click',() =>{
     document.body.classList.toggle('dark');
     btnSwitch.classList.toggle('active');  
 } )
 
-/* NOTIFICACION SOBRE CARRITO */
+        /* NOTIFICACION SOBRE CARRITO */
     function notificar(acumulado){
         document.querySelector("span.notificacion").textContent = acumulado;
     }
 
-    /* CLICK SOBRE CARRITO */
+        /* CLICK SOBRE CARRITO VACIO */
 const notificacion =  document.getElementById('iconCarrito');
     notificacion.addEventListener('click',(e) =>{
+
+        unSetToolTipCarrito()
        
         if(articulosAcumulados!=0 || articulosAcumulados>0){
             let x = document.getElementsByClassName("previoCarrito")[0];
@@ -173,16 +249,32 @@ const notificacion =  document.getElementById('iconCarrito');
                 notificacion.setAttribute("data-target","#carrito")
         }
 } )
+    function unSetToolTipCarrito() {
+         /* Falta analizar mejor */
+         let x = document.getElementById("iconCarrito");
+         x.setAttribute("data-toggle","collapse")
+         x.setAttribute("data-placement","")
+         x.setAttribute("title","")
+         x.setAttribute("aria-expanded","false")
+         x.setAttribute("aria-controls","collapseExample")
+         x.setAttribute("aria-describedby","")
+    }
+        /* TOOLTIP */
+        function initToolTip() {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+        }
  
-/* STEPPER */
-/* defino los pasos */
-let stepper2 = new Stepper(document.querySelector('#stepper2'), {
-    linear: false,
-    animation: true,
-    selectors: {
-    steps: '.step',
-    trigger: '.step-trigger',
-    stepper: '.bs-stepper'
+        /* STEPPER */
+    /* defino los pasos */
+    let stepper2 = new Stepper(document.querySelector('#stepper2'), {
+        linear: false,
+        animation: true,
+        selectors: {
+        steps: '.step',
+        trigger: '.step-trigger',
+        stepper: '.bs-stepper'
       }
   })
 

@@ -41,9 +41,11 @@ body
     }
 }
 .grid-fluid{        /* cuadricula responsive */
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    //display:grid;
+    //grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
     text-align: center;
+    padding: 2rem;
+    margin: 0.5rem;
 }
 
 /* FIN CARD */

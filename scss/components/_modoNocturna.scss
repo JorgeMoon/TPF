@@ -32,16 +32,18 @@
             left:unset;
         }
         span{
-        
-        color:map-get($color-base,indigo );
-        
+            position: relative;
+            color:map-get($color-base,indigo );
+            line-height: 30px;
         }
     }
 
     }
-    span{
+    span i.fa-sun{
         height: 30px;
         width: 30px;
+        position: relative;
+        left:0.5rem;
         line-height: 30px;
         display:block;
         background: none;
