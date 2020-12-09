@@ -5,7 +5,7 @@
    // document.addEventListener('DOMContentLoaded', e => { fetchData() });
 
 let articulosAcumulados = 0;
-
+/* 
    document.addEventListener("DOMContentLoaded", function(e) {
     fetchData();
     console.log("DOM cargado");
@@ -26,9 +26,9 @@ const fetchData = async() => {     //consumir json
     catch (error){
         console.log(error);
     }
-}
+} */
 
-
+/* 
 let cardProducto = document.querySelector('#productosMothers') //capturo el lugar donde voy a escribir
 let template = document.querySelector('#templateProductosMothers').content; // tomo el html para escribir
 let fragment = document.createDocumentFragment(); // otra opcion new DocumentFragment();
@@ -48,12 +48,12 @@ const writeCardHtml = data => {
             //template.querySelector('a').dataset.id = producto.id;
             //a lo ultimo clonar template
            let clone = template.cloneNode(true);
-           console.log("este es un clon --> "+clone)
+          // console.log("este es un clon --> "+clone)
             fragment.appendChild(clone);        //almaceno todo el contenido antes de escribirlo en el HTML
-            console.log(fragment +"<-- framento")
+           // console.log(fragment +"<-- framento")
     });
     cardProducto.appendChild(fragment);
-};
+}; */
 
     //identificando botones de AGREGAR para identificar producto
 const pescarBtnAgregar = data => {
@@ -65,17 +65,17 @@ const pescarBtnAgregar = data => {
         btn.addEventListener('click', ()=>{
                 //busco dentro de data el producto, comparando el id de btn con item.id dentro del "data"
 
-            let producto = data.find(item => item.id === parseInt(btn.dataset.id));
+            let producto = data.find(item => item.id === btn.dataset.id);
 
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
-                console.log("entro al if")
+                //console.log("entro al if")
                 producto.cantidad++;                    //incremento cantidad de producto
                 
                    // console.log(producto.cantidad)
                     //console.log(carrito)    
             }
             else{
-               console.log("entro al else")
+               //console.log("entro al else")
                 producto.cantidad = Number(1);
                 
             }
@@ -90,7 +90,7 @@ const pescarBtnAgregar = data => {
     //Identificamos botones de DETALLE
 const pescarBtnDetalle = data => {
     let botones = document.querySelectorAll('.card a');
-    console.log(botones)
+    //console.log(botones)
     botones.forEach(btn =>{
         btn.addEventListener('click', ()=>{
             console.log("cliqueaste boton DETALLE");
@@ -113,13 +113,13 @@ const cargarBodyCarrito = () =>{
      for (const key in carrito) {
         if (carrito.hasOwnProperty(key)){       //paso 3: pregunta si el objeto tiene el mismo ID
             const element = carrito[key]   
-            console.log(carrito) 
+           //console.log(carrito) 
                     //paso 4: Aca voy escribiendo las partes de la tabla
             template.querySelector('th').textContent = element.id;
             template.querySelectorAll('td')[0].textContent = element.title;
             template.querySelectorAll('td')[1].textContent = element.cantidad;
-            template.querySelector('td span').textContent = element.precio*element.cantidad;    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
-               
+            template.querySelector('td span').textContent = element.price*element.cantidad;    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
+               //console.log(element.price)
             //botones + y - <-- se le asigna el ID a cada boton en relacion al producto creado
             template.querySelector('td button.btn-info').dataset.id = element.id;
             template.querySelector('td button.btn-danger').dataset.id = element.id;
@@ -160,11 +160,11 @@ const cargarFooterCarrito = () =>{              //Aca vamos a poner el total $ y
         // es posible usar recude para ir acumulando, restando, sumando y el proceso de iteracion
         // y con 0 <- le pido que me devuelva en un numero, si le indico {} <- le pido que me devuelva un objeto
         const productosTotales = Object.values(carrito).reduce((acc,{cantidad}) => acc + cantidad, 0)
-        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,precio}) => acc+=cantidad*precio,0)
+        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,price}) => acc+=cantidad*price,0)
         //console.log("productosTOtales"+productosTotales)
         //console.log("productosTOtales"+preciosTotales)
-        console.log(productosTotales)
-        console.log(preciosTotales)
+       // console.log(productosTotales)
+        //console.log(preciosTotales)
     
         //aca armamos lo que vamos a mostrar, con los template
         template.querySelectorAll("td")[0].textContent = productosTotales;
@@ -184,8 +184,7 @@ const btnVaciarCarrito = () =>{
             notificar("")
             items.innerHTML = "";
             footerCarrito.innerHTML =""; 
-            
-
+        
         })
 }
 const btnAccionesCarrito = () =>{
@@ -200,8 +199,7 @@ const btnAccionesCarrito = () =>{
                 producto.cantidad++;    //incremento
                 carrito[btn.dataset.id] = {...producto}         //Propago las propiedates
                  //Actualizamos carrito
-                    cargarBodyCarrito();
-                    
+                    cargarBodyCarrito();        
             })
         })
         btnEliminar.forEach(btn =>{
@@ -213,7 +211,6 @@ const btnAccionesCarrito = () =>{
                     //elimino el objeto creado con el ID
                     delete carrito[btn.dataset.id];   
                     console.log(carrito);
-
                 }
                 else{
                     carrito[btn.dataset.id] = {...producto}         //Propago las propiedates
@@ -231,25 +228,30 @@ btnSwitch.addEventListener('click',() =>{
     btnSwitch.classList.toggle('active');  
 } )
 
-        /* NOTIFICACION SOBRE CARRITO */
+    ///--IN--IN--IN--IN------CARRITO------IN--IN--IN--IN--///
+        /* Notificacion sobre carrito */
     function notificar(acumulado){
         document.querySelector("span.notificacion").textContent = acumulado;
     }
+        /* Click sobre carrito vacio */
 
-        /* CLICK SOBRE CARRITO VACIO */
 const notificacion =  document.getElementById('iconCarrito');
     notificacion.addEventListener('click',(e) =>{
 
         unSetToolTipCarrito()
-       
+       //coordenadas del Carrito
+       coordCarrito();
+
         if(articulosAcumulados!=0 || articulosAcumulados>0){
             let x = document.getElementsByClassName("previoCarrito")[0];
                 x.setAttribute("id","carrito") 
             //console.log("abri carrito")
                 notificacion.setAttribute("data-target","#carrito")
+                
+                     
         }
 } )
-    function unSetToolTipCarrito() {
+    function unSetToolTipCarrito() {//cuando el carrito esta lleno deje de salir el aviso de "Carrito Vacio".
          /* Falta analizar mejor */
          let x = document.getElementById("iconCarrito");
          x.setAttribute("data-toggle","collapse")
@@ -259,6 +261,15 @@ const notificacion =  document.getElementById('iconCarrito');
          x.setAttribute("aria-controls","collapseExample")
          x.setAttribute("aria-describedby","")
     }
+
+        /* Conocer coordenadas de carrito */
+    function coordCarrito(){
+        let coords = $("button#iconCarrito").position();     //otro metodo similar es offset();
+        //Le asigno las coordenadas
+        $(".previoCarrito").css("left",`${coords.left}px`) 
+        }
+
+///--FIN--FIN--FIN--FIN------CARRITO------FIN--FIN--FIN--FIN--///
         /* TOOLTIP */
         function initToolTip() {
             $(function () {
@@ -277,6 +288,28 @@ const notificacion =  document.getElementById('iconCarrito');
         stepper: '.bs-stepper'
       }
   })
+
+  ///---------------------------CONOCER CAMBIO DE ANCHO DE VIEWPORT----------------------------------///
+
+let width = $(window).width();
+    $(window).on('resize', function(){
+        if($(this).width() != width){
+            width = $(this).width();
+            //console.log(width);
+            coordCarrito();//muevo carrito
+        }
+    }); 
+///--FIN--FIN--FIN--FIN----------CONOCER CAMBIO DE ANCHO DE VIEWPORT----------FIN--FIN--FIN--FIN--///
+
+///-----PESCAR CLICK -----///
+
+/* let clickWindow = */ $(window).on('click', ()=>{
+    console.log("Hice click") 
+/*     if(flagBtnCarrito>0){
+     let x = document.getElementsByClassName("previoCarrito")[0];
+        x.setAttribute("class","collapse")
+    } */
+}) 
 
 /* 
 //obtener ID unico

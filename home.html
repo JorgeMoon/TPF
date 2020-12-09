@@ -17,17 +17,16 @@
     <!-- Script y librerias -->
     <script src="stepper.js"></script>
     
-
     <!-- MIS ESTILOS -->
     <link rel="stylesheet" href="css/main.css">
    
-    <title>Armar PC</title>
+    <title>Cotizador de PC</title>
   </head>
   <body>
     <header class="container-fluid">
       <nav class=" row navbar navbar-expand-lg navbar-dark bg-dark border-top-0 d-flex justify-content-around fixed-top"> <!--  fixed-top, para que quede arriba -->
-        <a class="navbar-brand ml-3" href="Index.html"><img class="logo" src="assets/image/logo_master_race.png" alt=""></i></a>  <!-- <i class="far fa-analytics"> -->
-        <div class="container">
+        <a class="navbar-brand ml-3" href="Index.html"><img class="logo" src="assets/image/logo_master_race.png" alt=""></i></a>
+<!--         <div class="container">
           <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item px-3">
@@ -53,15 +52,10 @@
               </li>         
             </ul>
           </div>
-        </div>
+        </div> -->
         <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="tooltip" data-placement="bottom" title="Carrito Vacio">
           <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>
-        </button>
-
-        <!-- <button type="button" id="iconCarrito" class="btn btn-success mr-3" data-toggle="collapse"  aria-expanded="false" aria-controls="collapseExample">
-          <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>  
-        </button> -->
-        
+        </button>       
         <button class="switch m-2 mr-4" id="switch">
           <span><i class="fas fa-moon"></i></span>
           <span><i class="fas fa-sun"></i></span>
@@ -69,41 +63,38 @@
        
       </nav>                                
   </header>
+        <!-- CARRITO () -->
   <div class="collapse previoCarrito">
-    <div class="">
-          
-          <!-- CARRITO () -->
-      <div class="container mt-3">
-        <h4 class="text-center">Carrito de compras</h4>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Item</th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Acción</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody id="items">      <!-- Aca van los productos del carrito -->
-          </tbody>
-          <tfoot>
-            <tr id="footer">
-              <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-  
+    <div class="container mt-3">
+      <h4 class="text-center">Carrito de compras</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items">      <!-- Aca van los productos del carrito -->
+        </tbody>
+        <tfoot>
+          <tr id="footer">
+            <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
+          </tr>
+        </tfoot>
+      </table>
     </div>
   </div>
+  
         <!-- PASOS -->
           <!-- Paso 1 -->
-  <div class="container-fluid align-content-center justify-content-center">      
-    <div class="m-5 p-5 text-center ">
-      <h2>Arma tu PC Master Race</h2>
+  <div class="container-fluid">      
+    
+    <h2 class="m-5 p-5 text-center">Arma tu PC Master Race</h2>
       <div id="stepper2" class="bs-stepper">
-        <div class="bs-stepper-header">
+        <div class="bs-stepper-header row align-content-center justify-content-center">
           <div class="step" data-target="#test-nl-1">
             <button type="button" class=" btn step-trigger">
               <span class="bs-stepper-circle"><img src="assets/ico/svg/075-cpu-1.svg" alt=""></span>
@@ -147,7 +138,7 @@
 
                <!-- Producto mothers -->
             <div class="container-fluid" id="mother" rol="tabpanel" aria-labelledby="mother-tab">
-              <div id="productosMothers" class="row"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+              <div id="productosMothers" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
             </div>
               <!-- fin Producto mothers -->
 
@@ -182,18 +173,18 @@
           </div>
         </div>
       </div>
-    </div>
+    
   </div>
                           <!-- TEMPLATES -->
       <!-- Template para Producto Mothers -->
             <template id="templateProductosMothers">
               
-              <div class=".grid-fluid  p-1"> <!-- col-12 col-md-3 -->
+              <div class="grid-fluid p-1"> <!-- col-12 col-md-3 -->
                 <div class="card mt-3">
                   <img class="card-img-top" src="" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">Placa Madre</h5>
-                        <p class="card-text">$ <span>500</span></p>
+                      <h5 class="card-title">Titulo-Nombre</h5>
+                        <p class="card-text">$ <span>Precio</span></p>
                         <a href="#" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">
                           <i class="fa fa-info" aria-hidden="true"></i> Detalle
                         </a>
@@ -262,12 +253,13 @@
     <!-- Bootstrap V4.0 -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
  
-    
+    <script src="Api.js"></script>
     <script src="app.js"></script> <!-- defer => paraque se lea el script de forma diferida -->
   
   </body>
