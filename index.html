@@ -26,6 +26,9 @@
     <header class="container-fluid">
       <nav class=" row navbar navbar-expand-lg navbar-dark bg-dark border-top-0 d-flex justify-content-around fixed-top"> <!--  fixed-top, para que quede arriba -->
         <a class="navbar-brand ml-3" href="Index.html"><img class="logo" src="assets/image/logo_master_race.png" alt=""></i></a>
+        <button class="navbar-toggler collapsed" data-target="#navFull" data-toggle="collapse" type="button" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 <!--         <div class="container">
           <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ml-auto">
@@ -53,13 +56,15 @@
             </ul>
           </div>
         </div> -->
+        <div class="collapse navbar-collapse" id="navFull"> <!-- id para menu burger -->
         <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="tooltip" data-placement="bottom" title="Carrito Vacio">
           <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>
         </button>       
         <button class="switch m-2 mr-4" id="switch">
           <span><i class="fas fa-moon"></i></span>
           <span><i class="fas fa-sun"></i></span>
-        </button> 
+        </button>
+        </div>
        
       </nav>                                
   </header>
