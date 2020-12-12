@@ -14,10 +14,7 @@
     //Coolers y Ventiladores    -->             MLA430788
     // Gabinetes y Soporte      -->             MLA1696
     //Memo Ram                  -->             MLA1694
-    //Placa de Video            -->             MLA1658
-    
-    
-    
+    //Placa de Video            -->             MLA1658   
     
     //busqeuda por categoria
     "https://api.mercadolibre.com/sites/MLA/search?category=MLA3794"
