@@ -23,50 +23,39 @@
     <title>Cotizador de PC</title>
   </head>
   <body>
-    <header class="container-fluid">
-      <nav class=" row navbar navbar-expand-lg navbar-dark bg-dark border-top-0 d-flex justify-content-around fixed-top"> <!--  fixed-top, para que quede arriba -->
-        <a class="navbar-brand ml-3" href="Index.html"><img class="logo" src="assets/image/logo_master_race.png" alt=""></i></a>
-        <button class="navbar-toggler collapsed" data-target="#navFull" data-toggle="collapse" type="button" aria-expanded="false">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-<!--         <div class="container">
-          <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item px-3">
-                  <a class="nav-link items" href="#">Menu 1</a>
-              </li>
-              <li class="nav-item px-3"> 
-                  <a class="nav-link items" href="#">Menu 2</a>
-              </li>
-              <li class="nav-item px-3"> 
-                  <a class="nav-link items" href="#">Menu 3</a>
-              </li>
-              <li class="nav-item px-3">
-                  <a class="nav-link items" href="#">Menu 4</a>
-              <li class="nav-item px-3 dropdown">
-                  <a class="nav-link  text-gold btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu 5</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="error404.html">submenu1</a>
-                      <a class="dropdown-item" href="error404.html">submenu1</a>
-                      <a class="dropdown-item" href="error404.html">submenu1</a>
-                      <a class="dropdown-item" href="error404.html">submenu1</a>
-                      <a class="dropdown-item" href="error404.html">submenu1</a>
-                  </div>
-              </li>         
-            </ul>
-          </div>
-        </div> -->
-        <div class="collapse navbar-collapse" id="navFull"> <!-- id para menu burger -->
+    <header class="container-fluid ">
+      <!-- Barra superior -->
+      <nav class="row navbar navbar-dark navbar-expand-lg bg-dark border-top-0 fixed-top d-flex justify-content-between">
+        <a class="navbar-brand" href="Index.html">
+          <img class="logo" src="assets/image/logo_master_race.png" alt="logo">
+        </a>
         <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="tooltip" data-placement="bottom" title="Carrito Vacio">
           <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>
-        </button>       
-        <button class="switch m-2 mr-4" id="switch">
+        </button> 
+        <button class="switch m-2 mr-4 offset-11" id="switch">
           <span><i class="fas fa-moon"></i></span>
           <span><i class="fas fa-sun"></i></span>
         </button>
-        </div>
-       
-      </nav>                                
+
+     <!-- <div class="navbar-collapse collapse" id="navFull">
+           <div class="container d-flex justify-content-end">
+            <div class="row">
+               <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="tooltip" data-placement="bottom" title="Carrito Vacio">
+                <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>
+              </button> --> 
+      
+              <!-- <button class="switch m-2 mr-4 offset-11" id="switch">
+                <span><i class="fas fa-moon"></i></span>
+                <span><i class="fas fa-sun"></i></span>
+              </button>
+           </div>
+          </div>
+        </div> -->
+                  <!-- Menu hamburguesa -->
+         <!--  <button class="navbar-toggler collapsed mr-2" type="button" data-toggle="collapse" data-target="#navFull" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button> -->
+      </nav>                               
   </header>
         <!-- CARRITO () -->
   <div class="collapse previoCarrito">
@@ -134,7 +123,38 @@
               <span class="bs-stepper-label">FUENTE</span>
             </button>
           </div> 
+        
+        <div class="line"></div>
+        <div class="step" data-target="#test-nl-6">
+          <button type="button" class="btn step-trigger">
+            <span class="bs-stepper-circle"><img src="assets/ico/svg/091-desktop.svg" alt=""></span>
+            <span class="bs-stepper-label">GABINETE</span>
+          </button>
+        </div> 
+        <div class="line"></div>
+        <div class="step" data-target="#test-nl-7">
+          <button type="button" class="btn step-trigger">
+            <span class="bs-stepper-circle"><img src="assets/ico/svg/092-monitor.svg" alt=""></span>
+            <span class="bs-stepper-label">PANTALLA</span>
+          </button>
+        </div> 
+        <div class="line"></div>
+        <div class="step" data-target="#test-nl-8">
+          <button type="button" class="btn step-trigger">
+            <span class="bs-stepper-circle"><img src="assets/ico/svg/080-mouse.svg" alt=""></span>
+            <span class="bs-stepper-label">MOUSE</span>
+          </button>
         </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-nl-9">
+          <button type="button" class="btn step-trigger">
+            <span class="bs-stepper-circle"><img src="assets/ico/svg/013-keyboard-1.svg" alt=""></span>
+            <span class="bs-stepper-label">TECLADO</span>
+          </button>
+        </div> 
+      </div>
+
+        
           <!-- CONTENIDO -->
         <div class="bs-stepper-content">
             <!-- Contenido paso 1 -->
@@ -176,11 +196,35 @@
             <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
             
           </div>
+          <div id="test-nl-6" class="content">
+            <h3 class="text-center">Gabinete</h3>
+            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+          </div>
+
+          <div id="test-nl-7" class="content">
+            <h3 class="text-center">Pantalla</h3>
+            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+          </div>
+
+          <div id="test-nl-8" class="content">
+            <h3 class="text-center">Mouse</h3>
+            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+          </div>
+
+          <div id="test-nl-9" class="content">
+            <h3 class="text-center">Teclado</h3>
+            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+          </div>
+
         </div>
       </div>
     
   </div>
-                          <!-- TEMPLATES -->
+                          <!-- TEMPLATES  CARD-->
       <!-- Template para Producto Mothers -->
             <template id="templateProductosMothers">
               
@@ -188,11 +232,12 @@
                 <div class="card mt-3">
                   <img class="card-img-top" src="" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">Titulo-Nombre</h5>
+                      <h5 class="card-title">Titulo-Nombre</h5><!-- <button class="btn btn-sm btn-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Stock disponible con limitaciones.">Stock</button> -->
                         <p class="card-text">$ <span>Precio</span></p>
                         <a href="#" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">
                           <i class="fa fa-info" aria-hidden="true"></i> Detalle
                         </a>
+                        <input type="number" id="cantidad_6244" class="form-control" min="0" max="0" style="max-width: 30%" value="0">
                         <button href="#" class="btn btn-dark"><i class="fa fa-shopping-cart" aria-hidden="true"> Agregar</i></button>
                     </div>
                   </div>

@@ -5,55 +5,9 @@
    // document.addEventListener('DOMContentLoaded', e => { fetchData() });
 
 let articulosAcumulados = 0;
-/* 
-   document.addEventListener("DOMContentLoaded", function(e) {
-    fetchData();
-    console.log("DOM cargado");
-  });
 
-const fetchData = async() => {     //consumir json
-    try{
-        const res = await fetch('assets/api/apiMicros.json');
-        const data = await res.json();
-        console.log(res);
-        writeCardHtml(data);
-        pescarBtnAgregar(data);
-        initToolTip();
 
-        //pescarBtnDetalle(data); 
 
-    }
-    catch (error){
-        console.log(error);
-    }
-} */
-
-/* 
-let cardProducto = document.querySelector('#productosMothers') //capturo el lugar donde voy a escribir
-let template = document.querySelector('#templateProductosMothers').content; // tomo el html para escribir
-let fragment = document.createDocumentFragment(); // otra opcion new DocumentFragment();
-
-const writeCardHtml = data => {
-    
-    data.forEach(producto => {
-
-       //console.log(producto)
-            //capturo
-            template.querySelector('img').setAttribute('src', producto.imagen);  //busco la etiqueta img dentro de la card, selecciono el atributo src y le asigno el atributo el objeto creado con el json
-            template.querySelector('h5').textContent = producto.title;
-            template.querySelector('p span').textContent = producto.precio;
-            //construyo dataset para id, de cada elemento BOTON AGREGAR
-            template.querySelector('button').dataset.id = producto.id;
-            //construyo dataset para id, de cada elemento BOTON AGREGAR
-            //template.querySelector('a').dataset.id = producto.id;
-            //a lo ultimo clonar template
-           let clone = template.cloneNode(true);
-          // console.log("este es un clon --> "+clone)
-            fragment.appendChild(clone);        //almaceno todo el contenido antes de escribirlo en el HTML
-           // console.log(fragment +"<-- framento")
-    });
-    cardProducto.appendChild(fragment);
-}; */
 
     //identificando botones de AGREGAR para identificar producto
 const pescarBtnAgregar = data => {
@@ -265,7 +219,7 @@ const notificacion =  document.getElementById('iconCarrito');
         /* Conocer coordenadas de carrito */
     function coordCarrito(){
         let coords = $("button#iconCarrito").position();     //otro metodo similar es offset();
-        //Le asigno las coordenadas
+              //Le asigno las coordenadas
         $(".previoCarrito").css("left",`${coords.left}px`) 
         }
 

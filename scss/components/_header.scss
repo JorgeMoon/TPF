@@ -10,27 +10,6 @@
         }
   }
 
-  .items{
-    /* color: map-get($color-base,light); */
-        &:hover
-            {
-                color: map-get($color-base,gold)!important;
-                font-weight: bold;
-                transform: translateY(-3px);
-                transition: $time;
-            }
-  }
-  .dropdown-item{
-    &:hover
-    {
-        color: map-get($color-base,gold)!important;
-        font-weight: bold;
-        background: none;
-        transform:translateX(18px);
-        transition: $time;
-    }
-}
-
 .text-gold{
     color:map-get($color-base,gold) !important;
     text-decoration: none;
@@ -48,7 +27,4 @@
     color: map-get($color-base,light);
     text-transform: uppercase;
     font-size: 0.8rem;
-}
-.navbar-brand{
-    color: map-get($color-base,light); 
 }
