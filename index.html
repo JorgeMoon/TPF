@@ -55,238 +55,299 @@
          <!--  <button class="navbar-toggler collapsed mr-2" type="button" data-toggle="collapse" data-target="#navFull" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon "></span>
           </button> -->
-      </nav>                               
+      </nav>       
+      <!-- CARRITO -->    
+      <div class="collapse previoCarrito">
+        <div class="container mt-3">
+          <h4 class="text-center">Carrito de compras</h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="items">      <!-- Aca van los productos del carrito -->
+            </tbody>
+            <tfoot>
+              <tr id="footer">
+                <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>                 
   </header>
-        <!-- CARRITO () -->
-  <div class="collapse previoCarrito">
-    <div class="container mt-3">
-      <h4 class="text-center">Carrito de compras</h4>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Acción</th>
-            <th scope="col">Total</th>
-          </tr>
-        </thead>
-        <tbody id="items">      <!-- Aca van los productos del carrito -->
-        </tbody>
-        <tfoot>
-          <tr id="footer">
-            <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-  </div>
-  
+  <main>
         <!-- PASOS -->
           <!-- Paso 1 -->
-  <div class="container-fluid">      
-    
+  <div class="container">      
     <h1 class="m-5 p-5 text-center">Cotizar tu PC</h1>
       <div id="stepper2" class="bs-stepper">
         <div class="bs-stepper-header row align-content-center justify-content-center">
-          <div class="step" data-target="#test-nl-1">
+            <!--    <div class="step" data-target="#test-nl-1">
             <button type="button" class=" btn step-trigger">
               <span class="bs-stepper-circle"><img src="assets/ico/svg/075-cpu-1.svg" alt=""></span>
-              <span class="bs-stepper-label">CPU</span>
             </button>
           </div>
-          <div class="line"></div>
+          
           <div class="step" data-target="#test-nl-2">
             <div class="btn step-trigger">
               <span class="bs-stepper-circle"><img src="assets/ico/svg/070-motherboard.svg" alt=""></span>
-              <span class="bs-stepper-label">MOTHER</span>
             </div>
           </div>
-          <div class="line"></div>
+          
           <div class="step" data-target="#test-nl-3">
             <button type="button" class="btn step-trigger">
               <span class="bs-stepper-circle"><img src="assets/ico/svg/088-ram-memory.svg" alt=""></span>
-              <span class="bs-stepper-label">RAM</span>
+              
             </button>
          </div>
-         <div class="line"></div>
+         
           <div class="step" data-target="#test-nl-4">
             <button type="button" class="btn step-trigger">
               <span class="bs-stepper-circle"><img src="assets/ico/svg/012-video-card.svg" alt=""></span>
-              <span class="bs-stepper-label">GRAFICA</span>
+              
             </button>
           </div>
-         <div class="line"></div>
+         
           <div class="step" data-target="#test-nl-5">
             <button type="button" class="btn step-trigger">
               <span class="bs-stepper-circle"><img src="assets/ico/svg/084-supply.svg" alt=""></span>
-              <span class="bs-stepper-label">FUENTE</span>
+              
             </button>
           </div> 
         
-        <div class="line"></div>
-        <div class="step" data-target="#test-nl-6">
-          <button type="button" class="btn step-trigger">
-            <span class="bs-stepper-circle"><img src="assets/ico/svg/091-desktop.svg" alt=""></span>
-            <span class="bs-stepper-label">GABINETE</span>
-          </button>
-        </div> 
-        <div class="line"></div>
-        <div class="step" data-target="#test-nl-7">
-          <button type="button" class="btn step-trigger">
-            <span class="bs-stepper-circle"><img src="assets/ico/svg/092-monitor.svg" alt=""></span>
-            <span class="bs-stepper-label">PANTALLA</span>
-          </button>
-        </div> 
-        <div class="line"></div>
-        <div class="step" data-target="#test-nl-8">
-          <button type="button" class="btn step-trigger">
-            <span class="bs-stepper-circle"><img src="assets/ico/svg/080-mouse.svg" alt=""></span>
-            <span class="bs-stepper-label">MOUSE</span>
-          </button>
+        
+          <div class="step" data-target="#test-nl-6">
+            <button type="button" class="btn step-trigger">
+              <span class="bs-stepper-circle"><img src="assets/ico/svg/091-desktop.svg" alt=""></span>
+              
+            </button>
+          </div> 
+          
+          <div class="step" data-target="#test-nl-7">
+            <button type="button" class="btn step-trigger">
+              <span class="bs-stepper-circle"><img src="assets/ico/svg/092-monitor.svg" alt=""></span>
+              
+            </button>
+          </div> 
+          
+          <div class="step" data-target="#test-nl-8">
+            <button type="button" class="btn step-trigger">
+              <span class="bs-stepper-circle"><img src="assets/ico/svg/080-mouse.svg" alt=""></span>
+              
+            </button>
+          </div>
+          
+          <div class="step" data-target="#test-nl-9">
+            <button type="button" class="btn step-trigger">
+              <span class="bs-stepper-circle"><img src="assets/ico/svg/013-keyboard-1.svg" alt=""></span>
+              
+            </button>
+          </div> -->
         </div>
-        <div class="line"></div>
-        <div class="step" data-target="#test-nl-9">
-          <button type="button" class="btn step-trigger">
-            <span class="bs-stepper-circle"><img src="assets/ico/svg/013-keyboard-1.svg" alt=""></span>
-            <span class="bs-stepper-label">TECLADO</span>
-          </button>
-        </div> 
-      </div>
 
         
-          <!-- CONTENIDO -->
-        <div class="bs-stepper-content">
-            <!-- Contenido paso 1 -->
-          <div id="test-nl-1" class="content">
-            <h3 class="text-center">Microprocesador</h3>
+                              <!-- CONTENIDO -->
+                      <div class="bs-stepper-content">
+                          <!-- Contenido paso 1 -->
+                        <div id="test-nl-1" class="content">
+                          <h3 class="text-center">Microprocesador</h3>
 
-               <!-- Producto mothers -->
-            <div class="container-fluid" id="mother" rol="tabpanel" aria-labelledby="mother-tab">
-              <div id="productosMothers" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
-            </div>
-              <!-- fin Producto mothers -->
+                            <!-- Producto CPU -->
+                          <div class="container-fluid" id="mother">
+                            <div id="productosCPU" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                          </div>
+                            <!-- fin Producto CPU -->
 
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-          </div>
-            <!-- Fin Contenido paso 1 -->
-            <!-- Contenido paso 2 -->
-          <div id="test-nl-2" class="content">
-            <h3 class="text-center">Placa Madre</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-            
-          </div>
-            <!-- Fin Contenido paso 2 -->
-          <div id="test-nl-3" class="content">
-            <h3 class="text-center">Memoria RAM</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-            
-          </div>
-          <div id="test-nl-4" class="content">
-            <h3 class="text-center">Placa Grafica</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-            
-          </div>
-          <div id="test-nl-5" class="content">
-            <h3 class="text-center">Fuente</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-            
-          </div>
-          <div id="test-nl-6" class="content">
-            <h3 class="text-center">Gabinete</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-          </div>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                        </div>
+                          <!-- Fin Contenido paso 1 -->
+                          <!-- Contenido paso 2 -->
+                        <div id="test-nl-2" class="content">
+                          <h3 class="text-center">Placa Madre</h3>
 
-          <div id="test-nl-7" class="content">
-            <h3 class="text-center">Pantalla</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-          </div>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                          
+                        </div>
+                          <!-- Fin Contenido paso 2 -->
+                        <div id="test-nl-3" class="content">
+                          <h3 class="text-center">Memoria RAM</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                          
+                        </div>
+                        <div id="test-nl-4" class="content">
+                          <h3 class="text-center">Placa Grafica</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                          
+                        </div>
+                        <div id="test-nl-5" class="content">
+                          <h3 class="text-center">Fuente</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                          
+                        </div>
+                        <div id="test-nl-6" class="content">
+                          <h3 class="text-center">Gabinete</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                        </div>
 
-          <div id="test-nl-8" class="content">
-            <h3 class="text-center">Mouse</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-          </div>
+                        <div id="test-nl-7" class="content">
+                          <h3 class="text-center">Pantalla</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                        </div>
 
-          <div id="test-nl-9" class="content">
-            <h3 class="text-center">Teclado</h3>
-            <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-            <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-          </div>
+                        <div id="test-nl-8" class="content">
+                          <h3 class="text-center">Mouse</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                        </div>
 
+                        <div id="test-nl-9" class="content">
+                          <h3 class="text-center">Teclado</h3>
+                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                        </div>
+
+                      </div>
+        </div>
+    
+    </div>
+  </main>
+              <!-- MODALES -->
+               
+
+              <!-- Boton Compare -->
+    <div class="modal fade" id="modalCompare" tabindex="-1" role="dialog" aria-labelledby="modalBotonDetalleCard" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="container mt-3">
+            <h4 class="text-center">COMPARE</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Acción</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="items">      <!-- Aca van los productos del carrito -->
+              </tbody>
+              <tfoot>
+                <tr id="footer">
+                  <th  class="text-center" scope="row" colspan="5"></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
       </div>
-    
-  </div>
-                          <!-- TEMPLATES  CARD-->
-      <!-- Template para Producto Mothers -->
-            <template id="templateProductosMothers">
-              
-              <div class="grid-fluid p-1"> <!-- col-12 col-md-3 -->
-                <div class="card mt-3">
-                  <img class="card-img-top" src="" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Titulo-Nombre</h5><!-- <button class="btn btn-sm btn-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Stock disponible con limitaciones.">Stock</button> -->
-                        <p class="card-text">$ <span>Precio</span></p>
-                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">
-                          <i class="fa fa-info" aria-hidden="true"></i> Detalle
-                        </a>
-                        <input type="number" id="cantidad_6244" class="form-control" min="0" max="0" style="max-width: 30%" value="0">
-                        <button href="#" class="btn btn-dark"><i class="fa fa-shopping-cart" aria-hidden="true"> Agregar</i></button>
+    </div>
+              <!-- Fin Boton Compare -->
+
+                          <!-- TEMPLATES-->
+        <!---IN---IN---IN------Template CARD Producto--------IN--IN--IN-->
+    <template id="templateProductos">
+      
+      <div class="grid-fluid p-1"> 
+        <div class="card mt-3">
+          <img class="card-img-top" src="" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Titulo-Nombre</h5>
+                <p id="stock" class="bg-success text-white">Stock(<span></span>)</p>
+              <p class="card-text font-weight-bold">$ <span>Precio</span></p>
+                <div class="btn-group" role="group" aria-label="Grupo botones Card">
+                  <button type="button" id="infoProducto" href="#" class="btn btn-info" data-toggle="modal" data-target="#modalDetalle">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" id="compareProducto" href="#" class="btn btn-secondary" data-toggle="modal" data-target="#modalCompare">
+                    <i class="fas fa-balance-scale-left"></i>
+                  </button>
+                  <button type="button" id="agregarACarrito" href="#" class="btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                </div>
+            </div>
+          </div>
+      </div>
+                            <!-- Modal -->
+          <div class="modal fade bg-modal" id="modalDetalle" tabindex="-1" role="dialog" aria-labelledby="modalBotonDetalleCard" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalTitulo">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h4 class="text-center">DETALLES</h4>
+                  <p id="detalleProducto"></p>
+                  <hr>
+                  <div class="container-fluid">
+                    <div class="row d-flex justify-content-between" id="infoProductoModal">
+                      <!-- injecto desde JS -->
                     </div>
                   </div>
-              </div>
-           
-            </template>
-      <!-- Template Carrito-->
-        <!-- body Tabla -->
-<template id="templateBodyCarrito">
-  <tr>
-    <th scope="row">id</th>
-    <td>AMD</td>
-    <td class="text-center">1</td>
-    <td>
-        <button class=" btn btn-info btn-sm">
-            +
-        </button>
-        <button class=" btn btn-danger btn-sm">
-            -
-        </button>
-    </td>
-    <td>$ <span>500</span></td>
-  </tr>
-</template>
-
-      <!--  Footer de TABLA -->
-<template id="templateFooterCarrito">
-  <th scope="row" colspan="2">Total productos</th>
-  <td class="text-center">10</td>
-  <td >
-      <button class="btn btn-danger btn-sm" id="vaciarCarrito">
-          vaciar todo
-      </button>
-  </td>
-  <td class="font-weight-bold">$ <span>5000</span></td>
-</template>
-
-
-</div>
-
-            <!-- MODAL Detalle -->
-            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <h3>Lorem ipsum dolor si</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur.</p>
+                  
+                </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="agregarACarritoModal" href="#" class="btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
+          </div>
+            <!-- Fin Boton Detalle -->
+    
+    </template>
+        <!-- FIN--FIN--FIN------Template CARD Producto------FIN--FIN--FIN-->
+        
+        <!---IN---IN---IN-------Template Carrito------IN--IN--IN-->
+                <!--BODY TABLA -->
+    <template id="templateBodyCarrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>AMD</td>
+        <td class="text-center">1</td>
+        <td>
+            <button class=" btn btn-info btn-sm"> + </button>
+            <button class=" btn btn-danger btn-sm"> - </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+              <!--FOTER TABLA-->
+    <template id="templateFooterCarrito">
+      <th scope="row" colspan="2">Total productos</th>
+      <td class="text-center">10</td>
+      <td >
+          <button class="btn btn-danger btn-sm" id="vaciarCarrito"> vaciar todo </button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+        <!-- FIN--FIN--FIN------Template Carrito------FIN--FIN--FIN-->
+        
+            <!-- TEMPLATE STEPS -->
+    <template id="templateSteps">
+      <div class="step" data-target="#">
+        <button type="button" class="btn step-trigger" aria-selected="false">
+          <span class="bs-stepper-circle"><img src="assets/ico/svg/075-cpu-1.svg" alt=""></span>
+        </button>
+      </div>
+    </template>
+
 
                 <!-- FOOTER -->
     <footer class="footer d-flex align-content-center justify-content-center">
@@ -309,7 +370,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
  
-    <script src="Api.js"></script>
+    <script src="data.js"></script>
     <script src="app.js"></script> <!-- defer => paraque se lea el script de forma diferida -->
   
   </body>

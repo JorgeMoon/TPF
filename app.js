@@ -1,30 +1,22 @@
-/* CONECTAR CON API JSON*/
 
-    /* Verificar si ya se cargo HTML */
-    //DOMContentLoaded se dispara cuando el HTML esta completamente cargado
-   // document.addEventListener('DOMContentLoaded', e => { fetchData() });
-
+   //Objeto Carrito --> MODELO
+let carrito = {};
 let articulosAcumulados = 0;
-
-
-
 
     //identificando botones de AGREGAR para identificar producto
 const pescarBtnAgregar = data => {
-
-    let botones = document.querySelectorAll('.card button');
-     
+    let botones = document.querySelectorAll('button.btn-success');
+    console.log(botones)
         //recorro los botones esperando el evento
     botones.forEach(btn =>{
         btn.addEventListener('click', ()=>{
                 //busco dentro de data el producto, comparando el id de btn con item.id dentro del "data"
-
             let producto = data.find(item => item.id === btn.dataset.id);
-
+            
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
                 //console.log("entro al if")
                 producto.cantidad++;                    //incremento cantidad de producto
-                
+            
                    // console.log(producto.cantidad)
                     //console.log(carrito)    
             }
@@ -42,7 +34,7 @@ const pescarBtnAgregar = data => {
     })
 }
     //Identificamos botones de DETALLE
-const pescarBtnDetalle = data => {
+/* const pescarBtnDetalle = data => {
     let botones = document.querySelectorAll('.card a');
     //console.log(botones)
     botones.forEach(btn =>{
@@ -50,10 +42,8 @@ const pescarBtnDetalle = data => {
             console.log("cliqueaste boton DETALLE");
         })
     })
-}
+} */
 
-//Objeto Carrito --> MODELO
-let carrito = {};
 
 let items = document.querySelector('#items') //Capturamos donde vamos a pintar el carrito.
 
@@ -70,9 +60,9 @@ const cargarBodyCarrito = () =>{
            //console.log(carrito) 
                     //paso 4: Aca voy escribiendo las partes de la tabla
             template.querySelector('th').textContent = element.id;
-            template.querySelectorAll('td')[0].textContent = element.title;
+            template.querySelectorAll('td')[0].textContent = `${element.marca}-${element.linea}-${element.modelo}`;
             template.querySelectorAll('td')[1].textContent = element.cantidad;
-            template.querySelector('td span').textContent = element.price*element.cantidad;    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
+            template.querySelector('td span').textContent = element.precio*element.cantidad;    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
                //console.log(element.price)
             //botones + y - <-- se le asigna el ID a cada boton en relacion al producto creado
             template.querySelector('td button.btn-info').dataset.id = element.id;
@@ -114,7 +104,7 @@ const cargarFooterCarrito = () =>{              //Aca vamos a poner el total $ y
         // es posible usar recude para ir acumulando, restando, sumando y el proceso de iteracion
         // y con 0 <- le pido que me devuelva en un numero, si le indico {} <- le pido que me devuelva un objeto
         const productosTotales = Object.values(carrito).reduce((acc,{cantidad}) => acc + cantidad, 0)
-        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,price}) => acc+=cantidad*price,0)
+        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,precio}) => acc+=cantidad*precio,0)
         //console.log("productosTOtales"+productosTotales)
         //console.log("productosTOtales"+preciosTotales)
        // console.log(productosTotales)

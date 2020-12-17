@@ -49,3 +49,15 @@ body
 }
 
 /* FIN CARD */
+
+/* Botones */
+.btn{
+   /*  width: 5.5rem; */
+    &:hover
+      {
+          color: map-get($color-base,red)!important;
+          font-weight: bold;
+          transform: translateY(-3px);
+          transition: $time;
+      }
+}
