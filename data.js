@@ -78,7 +78,7 @@
         ///---------------------------CONECTAR A JSON LOCAL----------------------------///
      let url = 'assets/data/cpu.json';
    document.addEventListener("DOMContentLoaded", function(e) {
-    fetchPasos();
+    //fetchPasos();
     fetchData();
     console.log("DOM cargado");
   });
