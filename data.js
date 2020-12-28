@@ -16,12 +16,7 @@
         ///---------------------------CONECTAR A JSON LOCAL----------------------------///
 let url = "assets/data/cpu.json";
    document.addEventListener("DOMContentLoaded", function(e) {
-<<<<<<< HEAD
     fetchData(url);
-=======
-    //fetchPasos();
-    fetchData();
->>>>>>> e087be5cd55578379917de4bf8909707fd874032
     console.log("DOM cargado");
   });
 
