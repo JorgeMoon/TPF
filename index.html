@@ -29,7 +29,7 @@
         <a class="navbar-brand" href="Index.html">
           <img class="logo" src="assets/image/logo_master_race.png" alt="logo">
         </a>
-        <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="tooltip" data-placement="bottom" title="Carrito Vacio">
+        <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="collapse" title="Carrito">
           <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>
         </button> 
         <button class="switch m-2 mr-4 offset-11" id="switch">
@@ -37,24 +37,6 @@
           <span><i class="fas fa-sun"></i></span>
         </button>
 
-     <!-- <div class="navbar-collapse collapse" id="navFull">
-           <div class="container d-flex justify-content-end">
-            <div class="row">
-               <button type="button" id="iconCarrito"  class="btn btn-success mr-3" data-toggle="tooltip" data-placement="bottom" title="Carrito Vacio">
-                <i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger notificacion"></span></i>
-              </button> --> 
-      
-              <!-- <button class="switch m-2 mr-4 offset-11" id="switch">
-                <span><i class="fas fa-moon"></i></span>
-                <span><i class="fas fa-sun"></i></span>
-              </button>
-           </div>
-          </div>
-        </div> -->
-                  <!-- Menu hamburguesa -->
-         <!--  <button class="navbar-toggler collapsed mr-2" type="button" data-toggle="collapse" data-target="#navFull" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
-          </button> -->
       </nav>       
       <!-- CARRITO -->    
       <div class="collapse previoCarrito">
@@ -81,148 +63,179 @@
         </div>
       </div>                 
   </header>
+ 
+
   <main>
-        <!-- PASOS -->
-          <!-- Paso 1 -->
-  <div class="container">      
-    <h1 class="m-5 p-5 text-center">Cotizar tu PC</h1>
-      <div id="stepper2" class="bs-stepper">
-        <div class="bs-stepper-header row align-content-center justify-content-center">
-            <!--    <div class="step" data-target="#test-nl-1">
-            <button type="button" class=" btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/075-cpu-1.svg" alt=""></span>
-            </button>
+    <!-- PASOS -->
+      <!-- Paso 1 -->
+<div class="container">      
+<h1 class="m-5 p-5 text-center">Cotizar tu PC</h1>
+  <div id="stepper2" class="bs-stepper">
+          <div class="bs-stepper-header row align-content-center justify-content-center">
+            <div class="step" data-target="#s1">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/075-cpu-1.svg" alt=""></span>
+              </button>
+            </div>
+            
+            <div class="step" data-target="#s2">
+              <button class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/070-motherboard.svg" alt=""></span>
+              </button>
+            </div>
+            
+            <div class="step" data-target="#s3">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/088-ram-memory.svg" alt=""></span>
+                
+              </button>
           </div>
           
-          <div class="step" data-target="#test-nl-2">
-            <div class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/070-motherboard.svg" alt=""></span>
+            <div class="step" data-target="#s4">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/012-video-card.svg" alt=""></span>
+                
+              </button>
+            </div>
+          
+            <div class="step" data-target="#s5">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/084-supply.svg" alt=""></span>
+                
+              </button>
+            </div> 
+          
+          
+            <div class="step" data-target="#s6">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/091-desktop.svg" alt=""></span>
+                
+              </button>
+            </div> 
+            
+            <div class="step" data-target="#s7">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/092-monitor.svg" alt=""></span>
+                
+              </button>
+            </div> 
+            
+            <div class="step" data-target="#s8">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/080-mouse.svg" alt=""></span>
+                
+              </button>
+            </div>
+            
+            <div class="step" data-target="#s9">
+              <button type="button" class="btn step-trigger">
+                <span class="bs-stepper-circle"><img src="assets/ico/svg/013-keyboard-1.svg" alt=""></span>
+                
+              </button>
             </div>
           </div>
-          
-          <div class="step" data-target="#test-nl-3">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/088-ram-memory.svg" alt=""></span>
-              
-            </button>
-         </div>
-         
-          <div class="step" data-target="#test-nl-4">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/012-video-card.svg" alt=""></span>
-              
-            </button>
-          </div>
-         
-          <div class="step" data-target="#test-nl-5">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/084-supply.svg" alt=""></span>
-              
-            </button>
-          </div> 
-        
-        
-          <div class="step" data-target="#test-nl-6">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/091-desktop.svg" alt=""></span>
-              
-            </button>
-          </div> 
-          
-          <div class="step" data-target="#test-nl-7">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/092-monitor.svg" alt=""></span>
-              
-            </button>
-          </div> 
-          
-          <div class="step" data-target="#test-nl-8">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/080-mouse.svg" alt=""></span>
-              
-            </button>
-          </div>
-          
-          <div class="step" data-target="#test-nl-9">
-            <button type="button" class="btn step-trigger">
-              <span class="bs-stepper-circle"><img src="assets/ico/svg/013-keyboard-1.svg" alt=""></span>
-              
-            </button>
-          </div> -->
-        </div>
 
-        
-                              <!-- CONTENIDO -->
-                      <div class="bs-stepper-content">
-                          <!-- Contenido paso 1 -->
-                        <div id="test-nl-1" class="content">
-                          <h3 class="text-center">Microprocesador</h3>
-
-                            <!-- Producto CPU -->
-                          <div class="container-fluid" id="mother">
-                            <div id="productosCPU" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
-                          </div>
-                            <!-- fin Producto CPU -->
-
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                        </div>
-                          <!-- Fin Contenido paso 1 -->
-                          <!-- Contenido paso 2 -->
-                        <div id="test-nl-2" class="content">
-                          <h3 class="text-center">Placa Madre</h3>
-
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                          
-                        </div>
-                          <!-- Fin Contenido paso 2 -->
-                        <div id="test-nl-3" class="content">
-                          <h3 class="text-center">Memoria RAM</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                          
-                        </div>
-                        <div id="test-nl-4" class="content">
-                          <h3 class="text-center">Placa Grafica</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                          
-                        </div>
-                        <div id="test-nl-5" class="content">
-                          <h3 class="text-center">Fuente</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                          
-                        </div>
-                        <div id="test-nl-6" class="content">
-                          <h3 class="text-center">Gabinete</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                        </div>
-
-                        <div id="test-nl-7" class="content">
-                          <h3 class="text-center">Pantalla</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                        </div>
-
-                        <div id="test-nl-8" class="content">
-                          <h3 class="text-center">Mouse</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                        </div>
-
-                        <div id="test-nl-9" class="content">
-                          <h3 class="text-center">Teclado</h3>
-                          <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
-                          <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
-                        </div>
-
-                      </div>
-        </div>
     
+                          <!-- CONTENIDO -->
+                  <div class="bs-stepper-content">
+                      <!-- Paso 1 - CPU -->
+                    <div id="s1" class="content">
+                      <h3 class="text-center">Microprocesador</h3>
+                      <div class="container-fluid">
+                        <div id="s1e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                    </div>
+                      <!-- Fin paso 1 -->
+                      <!-- Paso 2 - Mother -->
+                    <div id="s2" class="content">
+                      <h3 class="text-center">Placa Madre</h3>
+                        <div class="container-fluid">
+                          <div id="s2e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                        </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                      
+                    </div>
+                      <!-- Fin Paso 2 -->
+                      <!-- Paso 3 - RAM -->
+                    <div id="s3" class="content">
+                      <h3 class="text-center">Memoria RAM</h3>
+                      <div class="container-fluid">
+                        <div id="s3e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                    </div>
+                      <!-- Fin Paso 3 -->
+                      <!-- Paso 4 - Grafica -->
+                    <div id="s4" class="content">
+                      <h3 class="text-center">Placa Grafica</h3>
+                      <div class="container-fluid">
+                        <div id="s4e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                      <!-- Fin paso 4 -->
+                      <!-- Paso 5 - Fuente -->
+                    </div>
+                    <div id="s5" class="content">
+                      <h3 class="text-center">Fuente</h3>
+                      <div class="container-fluid">
+                        <div id="s5e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                      <!-- Fin paso 5 -->
+                      <!-- Paso 6 - Gabinete -->
+                    </div>
+                    <div id="s6" class="content">
+                      <h3 class="text-center">Gabinete</h3>
+                      <div class="container-fluid">
+                        <div id="s6e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                    </div>
+                    <!-- Fin Paso 6 -->
+                    <!-- Paso 7 - Pantalla -->
+                    <div id="s7" class="content">
+                      <h3 class="text-center">Pantalla</h3>
+                      <div class="container-fluid">
+                        <div id="s7e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                    </div>
+                    <!-- Fin Paso 7 -->
+                    <!-- Paso 8 - Mouse -->
+                    <div id="s8" class="content">
+                      <h3 class="text-center">Mouse</h3>
+                      <div class="container-fluid">
+                        <div id="s8e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                    </div>
+                    <!-- Fin Paso 8 -->
+                    <!-- Paso 9 - Teclado -->
+                    <div id="s9" class="content">
+                      <h3 class="text-center">Teclado</h3>
+                      <div class="container-fluid">
+                        <div id="s9e" class="row align-content-center justify-content-center"></div> <!--  ACA INJECTAMOS DESDE JAVASCRIPT -->
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper2.previous()">Previous</button>
+                      <button class="btn btn-primary" onclick="stepper2.next()">Next</button>
+                    </div>
+                    <!-- Fin Paso 9 -->
+                  </div>
     </div>
-  </main>
+
+</div>
+</main>
+
+
+
               <!-- MODALES -->
                
 
@@ -303,7 +316,7 @@
                 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" id="agregarACarritoModal" href="#" class="btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  <button type="button" id="agregarACarrito" href="#" class="btn btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
@@ -314,7 +327,7 @@
         <!-- FIN--FIN--FIN------Template CARD Producto------FIN--FIN--FIN-->
         
         <!---IN---IN---IN-------Template Carrito------IN--IN--IN-->
-                <!--BODY TABLA -->
+              <!--BODY TABLA -->
     <template id="templateBodyCarrito">
       <tr>
         <th scope="row">id</th>
@@ -338,16 +351,6 @@
       <td class="font-weight-bold">$ <span>5000</span></td>
     </template>
         <!-- FIN--FIN--FIN------Template Carrito------FIN--FIN--FIN-->
-        
-            <!-- TEMPLATE STEPS -->
-    <template id="templateSteps">
-      <div class="step" data-target="#">
-        <button type="button" class="btn step-trigger" aria-selected="false">
-          <span class="bs-stepper-circle"><img src="assets/ico/svg/075-cpu-1.svg" alt=""></span>
-        </button>
-      </div>
-    </template>
-
 
                 <!-- FOOTER -->
     <footer class="footer d-flex align-content-center justify-content-center">

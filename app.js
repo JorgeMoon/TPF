@@ -3,9 +3,9 @@
 let carrito = {};
 let articulosAcumulados = 0;
 
-    //identificando botones de AGREGAR para identificar producto
+    //identificando botones de AGREGAR de cada producto
 const pescarBtnAgregar = data => {
-    let botones = document.querySelectorAll('button.btn-success');
+    let botones = document.querySelectorAll('button#agregarACarrito');
     console.log(botones)
         //recorro los botones esperando el evento
     botones.forEach(btn =>{
@@ -14,36 +14,19 @@ const pescarBtnAgregar = data => {
             let producto = data.find(item => item.id === btn.dataset.id);
             
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
-                //console.log("entro al if")
+                console.log(producto.id)
                 producto.cantidad++;                    //incremento cantidad de producto
-            
-                   // console.log(producto.cantidad)
-                    //console.log(carrito)    
             }
             else{
-               //console.log("entro al else")
                 producto.cantidad = Number(1);
                 
             }
-            carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad
-                //console.log(producto.cantidad)      
-           // console.log(carrito)     
+            carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad    
             cargarBodyCarrito();
             
         })
     })
 }
-    //Identificamos botones de DETALLE
-/* const pescarBtnDetalle = data => {
-    let botones = document.querySelectorAll('.card a');
-    //console.log(botones)
-    botones.forEach(btn =>{
-        btn.addEventListener('click', ()=>{
-            console.log("cliqueaste boton DETALLE");
-        })
-    })
-} */
-
 
 let items = document.querySelector('#items') //Capturamos donde vamos a pintar el carrito.
 
@@ -53,7 +36,7 @@ const cargarBodyCarrito = () =>{
     
         items.innerHTML = ""; //---> limpio para luego reescribir
         articulosAcumulados=0;
-    //posibilidad 1 -> trabajo sobre el objeto
+    
      for (const key in carrito) {
         if (carrito.hasOwnProperty(key)){       //paso 3: pregunta si el objeto tiene el mismo ID
             const element = carrito[key]   
@@ -182,7 +165,6 @@ btnSwitch.addEventListener('click',() =>{
 const notificacion =  document.getElementById('iconCarrito');
     notificacion.addEventListener('click',(e) =>{
 
-        unSetToolTipCarrito()
        //coordenadas del Carrito
        coordCarrito();
 
@@ -195,17 +177,7 @@ const notificacion =  document.getElementById('iconCarrito');
                      
         }
 } )
-    function unSetToolTipCarrito() {//cuando el carrito esta lleno deje de salir el aviso de "Carrito Vacio".
-         /* Falta analizar mejor */
-         let x = document.getElementById("iconCarrito");
-         x.setAttribute("data-toggle","collapse")
-         x.setAttribute("data-placement","")
-         x.setAttribute("title","")
-         x.setAttribute("aria-expanded","false")
-         x.setAttribute("aria-controls","collapseExample")
-         x.setAttribute("aria-describedby","")
-    }
-
+   
         /* Conocer coordenadas de carrito */
     function coordCarrito(){
         let coords = $("button#iconCarrito").position();     //otro metodo similar es offset();
@@ -214,24 +186,7 @@ const notificacion =  document.getElementById('iconCarrito');
         }
 
 ///--FIN--FIN--FIN--FIN------CARRITO------FIN--FIN--FIN--FIN--///
-        /* TOOLTIP */
-        function initToolTip() {
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-              })
-        }
- 
-        /* STEPPER */
-    /* defino los pasos */
-    let stepper2 = new Stepper(document.querySelector('#stepper2'), {
-        linear: false,
-        animation: true,
-        selectors: {
-        steps: '.step',
-        trigger: '.step-trigger',
-        stepper: '.bs-stepper'
-      }
-  })
+  
 
   ///---------------------------CONOCER CAMBIO DE ANCHO DE VIEWPORT----------------------------------///
 
@@ -245,219 +200,28 @@ let width = $(window).width();
     }); 
 ///--FIN--FIN--FIN--FIN----------CONOCER CAMBIO DE ANCHO DE VIEWPORT----------FIN--FIN--FIN--FIN--///
 
-///-----PESCAR CLICK -----///
-
-/* let clickWindow = */ $(window).on('click', ()=>{
-    console.log("Hice click") 
-/*     if(flagBtnCarrito>0){
-     let x = document.getElementsByClassName("previoCarrito")[0];
-        x.setAttribute("class","collapse")
-    } */
-}) 
-
-/* 
-//obtener ID unico
-var id = 100;
- function getId(){
-    id+=1;
-    return id;
-}; 
- //CLASES
- 
- class producto{
-     //caracteristico
-     constructor(precio,stock,marca){
-         this.id = getId();
-         this.precio = precio;
-         this.stock = stock;
-         this.marca = marca;
-     };
-    //Metodos obtener
-    obtId(){
-        return id = id;
-    }
-    obtPrecio() {
-        return this.precio;
-      }
-    obtStock(){
-        return this.stock;
-    }
-    //Metodos actualizar
-    actPrecio(x){
-        this.precio = x;
-    }
-    actStock(x){
-        this.stock = x;
-    }
- };
- 
-  
-class microprocesador extends producto{
-     //Caracteristicas
-    constructor(precio,stock,marca,modelo,familia,nucleos,hilos,frecuencia,turbo,litografia,socket,TDP){
-        super(precio,stock,marca,modelo);
-        this.modelo=modelo;
-        this.familia=familia;
-        this.nucleos=nucleos;
-        this.hilos=hilos;
-        this.frecuenciaBase=frecuencia;
-        this.frecuenciaTurbo=turbo;
-        this.litografia=litografia;
-        this.socket=socket;
-        this.consumoTDP=TDP;
-
-    };
-    //Metodos
-  
+///-----PESCAR CLICK -----$(window).on('click', (e)=>{}///
 
 
-};
+///---------------------------CONFIGURAR COLLAPSE CARRITO----------------------------------///
 
-class placaMadre extends producto{
-    constructor(id,precio,stock,marca,modelo,chipset,socket,slotMemorias,dimension){
-        super(id,precio,stock,marca,modelo);
-        this.chipset=chipset;
-        this.socket=socket;
-        this.slotMemorias=slotMemorias;
-        this.dimension=dimension;
-    };
-    //metodos
-};
-
-class memoriaRam extends producto{
-    constructor(id,precio,stock,marca,modelo,capacidad,frecuencia,slot,latencia,voltaje){
-        super(id,precio,stock,marca,modelo);
-        this.capacidad = capacidad;
-        this.frecuencia = frecuencia;
-        this.slot = slot;
-        this.latencia = latencia;
-        this.voltaje = voltaje;
-    };
-    //metodos
-};
-
-class almacenamiento extends producto{
-    constructor(id,precio,stock,marca,modelo,conexion,consumo,tipo){
-        super(id,precio,stock,marca,modelo);
-        this.conexion = conexion;
-        this.consumo = consumo;
-        this.tipo = tipo;
-    };
-    //metodo
-
-}; 
-
-
-//declarando objetos / Productos
-let Productos = [""];
-let i=0;
-var acumMicro=[];
-function makeProducto(n){
-    switch(n){
-        case 1:
-            const micro1 = new microprocesador(6548,78,"AMD","RYZEN 5","ZEN 2",6,12,3200,3600,7,"AM4",95);
-            Productos[i++]= micro1;
-            acumMicro[0]=+1;
-
-        break;
-        case 2:
-            const micro2 = new microprocesador(6548,78,"AMD","RYZEN 7","ZEN 2",8,16,3600,4000,7,"AM4",120);
-            Productos[i++]= micro2;
-            acumMicro[1]=+1;
-        break;
-        default:
-            console.error("no se creo producto,funcion makeProducto");
-    }
-};
-
-function addProducto(n){
-    switch(n){
-        case 1:
-            acumMicro[0]=+1;
-        break;
-        case 2:
-            acumMicro[1]=+1;
-        break;
-        default:
-            console.error("no se pudo agregar producto");
-    }
-};
-
-function downProducto(n){
-    switch(n){
-        case 1:
-            acumMicro[0]=-1;
-        break;
-        case 2:
-            acumMicro[0]=-1;
-        break;
-        default:
-            console.error("no se pudo quitar el producto");
-    }
-};
-
-function mostrarProducto(n){
-
-    document.getElementById("cantidad").innerHTML =  acumMicro[n];
-
-    for(let i=0;i<Productos.length;i++){
-   document.getElementById("id").innerHTML = Productos[i].id;
-   document.getElementById("producto").innerHTML = Productos[i].marca +"-"+ Productos[i].modelo;
-   document.getElementById("precio").innerHTML = Productos[i].precio;
-   document.getElementById("total").innerHTML = (Productos[i].precio*acumMicro[n]); 
-
-    };
+$(document).on("click",(e)=> {               
+   
+     let var1 = $('.previoCarrito#carrito');
     
-} ;
+    console.log(e.target)
+    console.log(var1)
+     if((!(var1.is(e.target)) && var1.has(e.target).length === 0)) { 
+        //alert("¡Pulsaste fuera!");     
+        console.log("entro a colapse 1")  
+        $('.collapse').collapse('hide')
+             
+      // $('.previoCarrito').collapse('hide')  
+     } 
 
-/* ARMAR HTML DE CADA MENU */
-    /* Procesadores */
-/* 
-const contenido ="";
-let ID="";
-let menuSider = ["micro", "mother","memoram","grafica","refrig","fuente","gabo","perif"];
-
-const pickMenu = document.querySelectorAll
-(".sideMenu");
-
-//identifico menu
-for(let i=0;i<pickMenu.length;i++){
-    pickMenu[i].addEventListener("click", function(){
-        ID = pickMenu[i].getAttribute("aria-controls")+"Contenido";        
-        //contenidoHtml();
-        })
-}
-
-/* Contenido */
-/* function contenidoHtml(){
-contenido = document.getElementById(ID).innerHTML = `
-    <div class="container-fluid d-flex m-5">
-    <div class="card m-3" style="width: 18rem;">
-    <img class="card-img-top" src="assets/image/micro-amd-athlon-3000g-vega-3-0.jpg" alt="Card image cap">
-    <div class="card-body">
-     <h5 class="card-title">Card title</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card m-3" style="width: 18rem;">
-    <img class="card-img-top" src="assets/image/micro-amd-athlon-3000g-vega-3-0.jpg" alt="Card image cap">
-    <div class="card-body">
-     <h5 class="card-title">Card title</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card m-3" style="width: 18rem;">
-    <img class="card-img-top" src="assets/image/micro-amd-athlon-3000g-vega-3-0.jpg" alt="Card image cap">
-    <div class="card-body">
-     <h5 class="card-title">Card title</h5>
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        </div>
-    </div>
-    `
-
-} */
- 
+ /*    if((!var3.is(e.target) && var3.has(e.target).length === 0)) { 
+        //alert("¡Pulsaste fuera!");     
+        console.log("entro a colapse")          
+       $('.collapse').collapse('hide')  
+     }  */ 
+});

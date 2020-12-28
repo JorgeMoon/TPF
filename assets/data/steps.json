@@ -1,38 +1,56 @@
 [
     {
-        "step":1,
-        "img":"assets/ico/svg/075-cpu-1.svg"
+        "step":"#s1",
+        "img":"assets/ico/svg/075-cpu-1.svg",
+        "name": "Microprocesador",
+        "url": "assets/data/cpu.json"
     },
     {
-        "step":2,
-        "img":"assets/ico/svg/070-motherboard.svg"
+        "step":"#s2",
+        "img":"assets/ico/svg/070-motherboard.svg",
+        "name": "Placa Madre",
+        "url": "assets/data/mother.json"
     },
     {
-        "step":3,
-        "img":"assets/ico/svg/088-ram-memory.svg"
+        "step":"#s3",
+        "img":"assets/ico/svg/088-ram-memory.svg",
+        "name": "Memoria RAM",
+        "url": "assets/data/ram.json"
     },
     {
-        "step":4,
-        "img":"assets/ico/svg/012-video-card.svg"
+        "step":"#s4",
+        "img":"assets/ico/svg/012-video-card.svg",
+        "name": "Grafica",
+        "url": "assets/data/grafica.json"
     },
     {
-        "step":5,
-        "img":"assets/ico/svg/084-supply.svg"
+        "step":"#s5",
+        "img":"assets/ico/svg/084-supply.svg",
+        "name": "Fuente",
+        "url": "assets/data/fuente.json"
     },
     {
-        "step":6,
-        "img":"assets/ico/svg/091-desktop.svg"
+        "step":"#s6",
+        "img":"assets/ico/svg/091-desktop.svg",
+        "name": "Gabinete",
+        "url": "assets/data/gabinete.json"
     },
     {
-        "step":7,
-        "img":"assets/ico/svg/092-monitor.svg"
+        "step":"#s7",
+        "img":"assets/ico/svg/092-monitor.svg",
+        "name": "Monitor",
+        "url": "assets/data/pantalla.json"
     },
     {
-        "step":8,
-        "img":"assets/ico/svg/080-mouse.svg"
+        "step":"#s8",
+        "img":"assets/ico/svg/080-mouse.svg",
+        "name": "Mouse",
+        "url": "assets/data/mouse.json"
     },
     {
-        "step":9,
-        "img":"assets/ico/svg/013-keyboard-1.svg"
+        "step":"#s9",
+        "img":"assets/ico/svg/013-keyboard-1.svg",
+        "name": "Teclado",
+        "url": "assets/data/teclado.json"
     }
 ]
