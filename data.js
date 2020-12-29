@@ -26,10 +26,10 @@ const fetchData = async(url) => {     //consumir json
         const data = await resData.json();
         let selector = "#s1e"
         writeCardHtml(data,selector);
-        pescarBtnAgregar(data);
 
         const resStep =await fetch('assets/data/steps.json');
         const steps = await resStep.json();
+        pescarBtnAgregar(data,steps);
         pescarSteps(steps);
 
     }
@@ -63,6 +63,7 @@ const fetchData = async(url) => {     //consumir json
             },
             error: function() {
                 console.log("No se ha podido obtener la información");
+                document.querySelector(selector).innerHTML = "Lo siento!, no se han encontrado Datos"; 
             }
         });
             
@@ -127,3 +128,8 @@ function writeCardHtml(data,selector){
         cardProducto.appendChild(fragment); //escribo el html
         //console.log(cardProducto)
     };
+
+
+    /* CARRITO DA SIGUIENTE */
+
+   // stepper2.next()

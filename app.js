@@ -4,7 +4,7 @@ let carrito = {};
 let articulosAcumulados = 0;
 
     //identificando botones de AGREGAR de cada producto
-const pescarBtnAgregar = data => {
+const pescarBtnAgregar = (data,steps) => {
     let botones = document.querySelectorAll('button#agregarACarrito');
     console.log(botones)
         //recorro los botones esperando el evento
@@ -23,6 +23,8 @@ const pescarBtnAgregar = data => {
             }
             carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad    
             cargarBodyCarrito();
+            stepper2.next();
+            pescarSteps(steps);
             
         })
     })
