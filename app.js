@@ -45,7 +45,7 @@ const cargarBodyCarrito = () =>{
             template.querySelector('th').textContent = element.id;
             template.querySelectorAll('td')[0].textContent = `${element.marca}-${element.linea}-${element.modelo}`;
             template.querySelectorAll('td')[1].textContent = element.cantidad;
-            template.querySelector('td span').textContent = element.precio*element.cantidad;    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
+            template.querySelector('td span').textContent = format(format(element.precio)*element.cantidad,1);    //ya voy multiplicando el precio por cantidad, pero no guarde el dato
                //console.log(element.price)
             //botones + y - <-- se le asigna el ID a cada boton en relacion al producto creado
             template.querySelector('td button.btn-info').dataset.id = element.id;
@@ -76,7 +76,7 @@ const cargarFooterCarrito = () =>{              //Aca vamos a poner el total $ y
         footer.innerHTML = `
         <th scope="row" colspan="5"></th>
         `
-        return
+       // return
     }
     //sumar cantidad y sumar totales
         //primero tranformo en un array para poder usar el metodo reduce();
@@ -87,20 +87,35 @@ const cargarFooterCarrito = () =>{              //Aca vamos a poner el total $ y
         // es posible usar recude para ir acumulando, restando, sumando y el proceso de iteracion
         // y con 0 <- le pido que me devuelva en un numero, si le indico {} <- le pido que me devuelva un objeto
         const productosTotales = Object.values(carrito).reduce((acc,{cantidad}) => acc + cantidad, 0)
-        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,precio}) => acc+=cantidad*precio,0)
-        //console.log("productosTOtales"+productosTotales)
-        //console.log("productosTOtales"+preciosTotales)
-       // console.log(productosTotales)
-        //console.log(preciosTotales)
-    
+        const preciosTotales = Object.values(carrito).reduce((acc,{cantidad,precio}) => acc+=cantidad*format(precio),0)
+     
         //aca armamos lo que vamos a mostrar, con los template
         template.querySelectorAll("td")[0].textContent = productosTotales;
-        template.querySelector("td span").textContent = preciosTotales;
+        template.querySelector("td span").textContent = format(preciosTotales,1);
         const clone = template.cloneNode(true);
         fragment.appendChild(clone);
 
         footerCarrito.appendChild(fragment);
 }
+
+        /* FORMATEAR NUMEROS */
+        function format(input,a=0){
+            let num = Number(input);
+            if(a==0){
+                num = num.toFixed(2);
+                return num;
+            }
+            else{
+            input= new Intl.NumberFormat("es-AR", //BCP 47
+             {style: "currency",
+              currency: "ARS",  //
+              currencyDisplay: "symbol" //code
+                }
+            ).format(input)
+            return input
+            }
+        }
+
         /* VACIAR CARRITO */
 const btnVaciarCarrito = () =>{
     let btnVaciarCarrito = document.getElementById("vaciarCarrito");
@@ -209,19 +224,11 @@ $(document).on("click",(e)=> {
    
      let var1 = $('.previoCarrito#carrito');
     
-    console.log(e.target)
-    console.log(var1)
+    //console.log(e.target)
+    //console.log(var1)
      if((!(var1.is(e.target)) && var1.has(e.target).length === 0)) { 
         //alert("¡Pulsaste fuera!");     
         console.log("entro a colapse 1")  
-        $('.collapse').collapse('hide')
-             
-      // $('.previoCarrito').collapse('hide')  
+        //$('.collapse').collapse('hide')
      } 
-
- /*    if((!var3.is(e.target) && var3.has(e.target).length === 0)) { 
-        //alert("¡Pulsaste fuera!");     
-        console.log("entro a colapse")          
-       $('.collapse').collapse('hide')  
-     }  */ 
 });

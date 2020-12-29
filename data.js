@@ -92,7 +92,7 @@ function writeCardHtml(data,selector){
                 //capturo
                 template.querySelector('img').setAttribute('src', producto.imagen);  //busco la etiqueta img dentro de la card, selecciono el atributo src y le asigno el atributo el objeto creado con el json
                 template.querySelector('h5').textContent = `${producto.marca}-${producto.linea}-${producto.modelo}`;
-                template.querySelector('p.card-text span').textContent = producto.precio;
+                template.querySelector('p.card-text span').textContent = format(producto.precio,1);
                 template.querySelector('#stock span').textContent = producto.cantidad;
                 //construyo dataset para id, de cada elemento BOTON AGREGAR, BOTON INFO
                 template.querySelector('button#agregarACarrito').dataset.id = producto.id;
@@ -106,13 +106,17 @@ function writeCardHtml(data,selector){
                 template.querySelector('.modal-footer button#agregarACarrito').dataset.id = producto.id; /* Boton Carrito */
                 
                         //Armo detalle
+                template.querySelector("div.row.d-flex.justify-content-between").setAttribute("id",`${producto.id}d`)
+                console.log(template)  
+                template.querySelector(`#${producto.id}d`).innerHTML = ""; //limpio              
                 for (const key in producto.detalle) {
-                    if (producto.detalle.hasOwnProperty(key)) {
-                        const element = producto.detalle[key];
-                        template.querySelector('div.row#infoProductoModal').innerHTML += `<p class="col-6">${key}: <span class="font-weight-bold">${element}</span></p>`;
+                    if (Object.hasOwnProperty.call (producto.detalle, key)) {
+                        const element = producto.detalle[key];    
+                        template.querySelector(`#${producto.id}d`).innerHTML += `<p class="col-6">${key}: <span class="font-weight-bold">${element}</span></p>`;
                     }
-                }
-            let clone = template.cloneNode(true);
+                } 
+
+                let clone = template.cloneNode(true);
             
             // console.log("este es un clon --> "+clone)
                 fragment.appendChild(clone);        //almaceno todo el contenido antes de escribirlo en el HTML
