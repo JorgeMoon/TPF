@@ -1,0 +1,95 @@
+[
+    {
+        "id": "MR41",
+        "marca": "Kingston",
+        "linea": "HyperX Fury",
+        "modelo": "HX426C16FB3/8",
+        "Color":"Negro",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_725124-MLA40927542006_022020-F.webp",
+        "precio": 3989,
+        "descripcion": "Kingston es sinónimo de trayectoria y excelencia en el mercado tecnológico, principalmente en lo que a memorias ram refiere. Si sos un aficionado a los videojuegos o un exigente profesional creativo, las memorias HyperX responden sin problemas a tus necesidades. Incluyen funciones avanzadas, como lo son los estilos de disipación térmica, memoria de overclocking automático Plug-N-Play, memoria con perfiles XMP y memoria RGB. No dejes que tu sistema se lentifique.",
+        "linkMercadolibre": "https://www.mercadolibre.com.ar/memoria-ram-8gb-1x8gb-kingston-hx426c16fb38-hyperx-fury/p/MLA15178125#searchVariation=MLA15178125&position=1&type=product&tracking_id=1bce9049-2f02-4f4e-90ca-49867df1e5fb",
+        "detalle":{
+          "Formato": "UDIMM",
+          "Tecnología": "DDR4 SDRAM",
+          "Modelo": "HX426C16FB3/8",
+          "Velocidad":"2666 MHz",
+          "Pines":"288",
+          "Latencia CAS": "16",
+          "Transferencia":"--",
+          "Voltaje": "1,2V",
+          "Modulos": "1 X 8GB",
+          "Capacidad":"8GB"
+          },
+        "cantidad": 4
+      },
+      {
+        "id": "MR42",
+        "marca": "Adata",
+        "linea": "XPG Hunter",
+        "modelo": "AX4U300038G16A-SBHT",
+        "Color":"Black",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_822665-MLA42807828911_072020-F.webp",
+        "precio": 4689,
+        "descripcion": "Si tu computadora funciona con lentitud, si un programa no responde o no se carga, lo más probable es que se trate de un problema de memoria. Estos son posibles indicios de un rendimiento defectuoso en el día a día de tus tareas. Por ello, contar con una memoria Kingston -sinónimo de tractoria y excelencia- mejorará la productividad de tu equipo: las páginas se cargarán más rápido y la ejecución de nuevas aplicaciones resultará más ágil y simple.",
+        "detalle":{
+          "Formato": "UDIMM",
+          "Tecnología": "DDR4",
+          "Modelo": "AX4U300038G16A-SBHT",
+          "Velocidad":"3000 MHz",
+          "Pines":"288",
+          "Latencia CAS": "16",
+          "Transferencia":"24000 MB/s",
+          "Voltaje": "1,35V",
+          "Modulos": "1 X 8GB",
+          "Capacidad":"8GB"
+          },
+        "cantidad": 13
+      },
+      {
+        "id": "MR43",
+        "marca": "Kingston",
+        "linea": "ValueRAM",
+        "modelo": "KVR1333D3N9/4G",
+        "Color":"Black",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_822665-MLA42807828911_072020-F.webp",
+        "precio": 4340,
+        "descripcion": "Trabajá con libertad: Ya sea que uses tu computadora para actividades domésticas como navegar por internet, enviar correos o contenido multimedia, o bien para trabajar utilizando diversas funciones en simultáneo, esta memoria es para vos. Gracias a su velocidad de 1333 MHz, podrás realizar todas tus tareas de manera rápida y efectiva.",
+        "detalle":{
+          "Formato": "UDIMM",
+          "Tecnología": "DDR3 SDRAM",
+          "Modelo": "KVR1333D3N9/4G",
+          "Velocidad":"1333 MHz",
+          "Pines":"240",
+          "Latencia CAS": "9",
+          "Transferencia":"10600 MB/s",
+          "Voltaje": "1,5V",
+          "Modulos": "1 X 4GB",
+          "Capacidad":"4GB"
+          },
+        "cantidad": 19
+      },
+      {
+        "id": "MR44",
+        "marca": "Corsair",
+        "linea": "Vengeance LP",
+        "modelo": "CML8GX3M1A1600C9",
+        "Color":"Black",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_822665-MLA42807828911_072020-F.webp",
+        "precio": 5100,
+        "descripcion": "Esta memoria de formato DIMM, es ideal para tu computadora de escritorio. ¡Instalala y comenzá a disfrutar de un óptimo funcionamiento!",
+        "detalle":{
+          "Formato": "UDIMM",
+          "Tecnología": "DDR3",
+          "Modelo": "CML8GX3M1A1600C9",
+          "Velocidad":"1600 MHz",
+          "Pines":"240",
+          "Latencia CAS": "9",
+          "Transferencia":"12800 MB/s",
+          "Voltaje": "1,5V",
+          "Modulos": "1 X 8GB",
+          "Capacidad":"8GB"
+          },
+        "cantidad": 14
+      }
+]
