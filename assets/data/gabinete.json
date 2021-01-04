@@ -1,0 +1,90 @@
+[
+{
+    "id": "GT71",
+    "marca": "BRB",
+    "linea": "bze 30 RGB",
+    "modelo": "BZE-30",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_610207-MLA44255873572_122020-F.webp",
+    "precio": 6999,
+    "descripcion": "Criterio fundamental a la hora de elegir tu placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te hará ver hasta los detalles más ínfimos en cada ilustración.",
+    "detalle":{
+        "Tipo": "Mid tower",
+        "Placas madres compatibles": "E-ATX, ATX, M-ATX, M-ITX",
+        "Fuente": "no",
+        "Bahías": "2.5/3.5",
+        "Gamer": "si",
+        "Puertos": "SALIDA MICROFONO Y AURICULARES 2 USB 2.0 Y 1 USB 3.0",
+        "Altura":"43cm",
+        "Ancho":"18cm",
+        "Largo":"37cm",
+        "Peso":"--Kg"   
+        },
+    "cantidad": 2
+},
+{
+    "id": "GT72",
+    "marca": "Cooler Master",
+    "linea": "MasterBox",
+    "modelo": "Q300L",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_898245-MLA31353261776_072019-O.webp",
+    "precio": 8762,
+    "descripcion": "",
+    "detalle":{
+        "Tipo": "Mid tower",
+        "Placas madres compatibles": "E-ATX, ATX, M-ATX, M-ITX",
+        "Fuente": "no",
+        "Bahías": "5.25 Drive Bays 0 / 3.5 HDD Drive Bays 1 / 2.5 SSD Drive Bays 2",
+        "Gamer": "si",
+        "Puertos": "SALIDA MICROFONO Y AURICULARES 2 USB 2.0 Y 1 USB 3.0",
+        "Altura":"43cm",
+        "Ancho":"18cm",
+        "Largo":"37cm",
+        "Peso":"--Kg"   
+        },
+    "cantidad": 3
+},
+{
+    "id": "GT73",
+    "marca": "Cooler Master",
+    "linea": "h100",
+    "modelo": "MCM-H100-KANN-S00",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_633584-MLA43570155993_092020-O.webp",
+    "precio": 8489,
+    "descripcion": "La MasterCase H100 es una funda mini-ITX de tamaño conveniente que se puede configurar como una plataforma de juegos portátil, una pequeña PC de sala de estar y un protector de espacio de escritorio. Desde su construcción industrial hasta su panel frontal completamente de malla, el H100 encaja perfectamente en la serie como una alternativa de tamaño de viaje.",
+    "detalle":{
+        "Tipo": "Mid tower",
+        "Placas madres compatibles": "E-ATX, ATX, M-ATX, M-ITX",
+        "Fuente": "no",
+        "Bahías": "2.5 / 3.5 DRIVE BAYS (COMBO) 1,2.5 DRIVE BAYS 4 (3+1 combo)",
+        "Gamer": "si",
+        "Puertos": " 2x USB 3.2 Gen 1 (formerly USB 3.0),1x 3.5mm Audio Jack,1x 3.5mm Mic Jack,1x RGB Controller",
+        "Altura":"312mm",
+        "Ancho":"216mm",
+        "Largo":"301mm",
+        "Peso":"--Kg"   
+        },
+    "cantidad": 5
+},
+{
+    "id": "GT74",
+    "marca": "Deepcool",
+    "linea": "Matrexx",
+    "modelo": "Matrexx 55",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_891519-MLA43778034483_102020-O.webp",
+    "precio": 15999,
+    "descripcion": "El gabinete Matrexx 55 V3 presenta un diseño ATX compacto con 2 paneles transparentes para lucir el interior de tu armado (Vidrio templado de 4mm en el panel lateral) y tomas de aire tanto en el panel frontal como en el superior, inferior y trasero para asegurar un flujo de aire máximo para la refrigeración de componentes.",
+    "detalle":{
+        "Tipo": "Mid tower",
+        "Placas madres compatibles": "E-ATX, ATX, M-ATX, M-ITX",
+        "Fuente": "no",
+        "Bahías": "2.5",
+        "Gamer": "si",
+        "Puertos": "USB 3.0",
+        "Altura":"480mm",
+        "Ancho":"210mm",
+        "Largo":"440mm",
+        "Peso":"--Kg"   
+        },
+    "cantidad": 9
+    }
+]
