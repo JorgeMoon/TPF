@@ -1,0 +1,93 @@
+[
+    {
+    "id": "PL71",
+    "marca": "LG",
+    "linea": "19",
+    "modelo": "19M38A",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_927012-MLA32992632906_112019-F.webp",
+    "precio": 11600,
+    "descripcion": "Disfrutá de todas las cualidades que el monitor LG 19M38A tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementa cualquier espacio ya sea en tu casa u oficina.",
+    "detalle":{
+        "Tipo": "LED",
+        "Frecuencia": "60 Hz",
+        "Tamaño":"19 pulgadas",
+        "Resolucion": "1366px x 768px",
+        "Relacion": "16:9",
+        "Contraste": "600:1",
+        "Brillo":"200 cd/m²",
+        "Tecnologia":"TN",
+        "Voltaje":"100V/240V",
+        "Conexiones del monitor":"RGB"    
+        },
+    "cantidad": 18
+    },
+    {
+    "id": "PL72",
+    "marca": "HP",
+    "linea": "21.5",
+    "modelo": "N223",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_930266-MLA43117786678_082020-F.webp",
+    "precio": 15999,
+    "descripcion": "Disfrutá de todas las cualidades que el monitor HP N223 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementa cualquier espacio ya sea en tu casa u oficina.",
+    "detalle":{
+        "Tipo": "LED",
+        "Frecuencia": "60 Hz",
+        "Tamaño":"21.5 pulgadas",
+        "Resolucion": "1920px x 1080px",
+        "Relacion": "16:9",
+        "Contraste": "600:1",
+        "Brillo":"250 cd/m²",
+        "Tecnologia":"TN",
+        "Voltaje":"100V/240V",
+        "Conexiones del monitor":"HDMI, VGA",
+        "Color":"Negro"  
+        },
+    "cantidad": 6
+    },
+    {
+    "id": "PL73",
+    "marca": "LG",
+    "linea": "19.5",
+    "modelo": "20MK400H",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_772854-MLA32149817422_092019-F.webp",
+    "precio": 12600,
+    "descripcion": "Disfrutá de todas las cualidades que el monitor LG 20MK400H tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementa cualquier espacio ya sea en tu casa u oficina.",
+    "detalle":{
+        "Tipo": "LED",
+        "Frecuencia": "60 Hz",
+        "Tamaño":"19.5 pulgadas",
+        "Resolucion": "1366px x 768px",
+        "Relacion": "16:9",
+        "Contraste": "600:1",
+        "Brillo":"200 cd/m²",
+        "Tecnologia":"TN",
+        "Voltaje":"100V/240V",
+        "Conexiones del monitor":"D-Sub, HDMI",
+        "Color":"Negro mate"    
+        },
+    "cantidad": 6
+    },
+    {
+        "id": "PL72",
+        "marca": "ViewSonic",
+        "linea": "19.5",
+        "modelo": "VA1903H",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_868740-MLA41517017352_042020-F.webp",
+        "precio": 13900,
+        "descripcion": "Sus 18.5 pulgadas te va a resultar ideal en tu vida diaria ya sea para estudiar o trabajar. Asimismo, su resolución de 1366 x 768 te permite disfrutar de momentos únicos gracias a una imagen con gran nitidez.",
+        "detalle":{
+            "Tipo": "LED",
+            "Frecuencia": "60 Hz",
+            "Tamaño":"18.5 pulgadas",
+            "Resolucion": "1366px x 768px",
+            "Relacion": "16:9",
+            "Contraste": "600:1",
+            "Brillo":"200 cd/m²",
+            "Tecnologia":"TN",
+            "Voltaje":"100V/240V",
+            "Conexiones del monitor":"HDMI, VGA",
+            "Color":"Negro"    
+            },
+        "cantidad": 3
+        }
+]
