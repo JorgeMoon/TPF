@@ -1,0 +1,71 @@
+[
+{
+    "id": "ME81",
+    "marca": "Logitech",
+    "linea": "M",
+    "modelo": "170",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_773480-MLA42361716768_062020-F.webp",
+    "precio": 710,
+    "descripcion": "Para trabajar desde casa con la computadora o aprovechar los momentos de ocio, necesitas comodidad y facilidad de movimiento. Con tu Logitech M170 encontrás eso que buscás en un solo aparato con la mejor tecnología.",
+    "detalle":{
+        "Tipo": "Convencional",
+        "Sensor": "Optico",
+        "Resolucion": "1000dpi",
+        "Interfaces": "USB",
+        "Inalambrico":"si",
+        "Alcance":"10m",
+        "Botones": "3",
+        "Rueda": "1",
+        "Radio": "2.4 GHz",
+        "Color":"Negro",
+        "Cable":"no"   
+        },
+    "cantidad":62
+    } ,
+    {
+        "id": "ME82",
+        "marca": "Genius",
+        "linea": "NX",
+        "modelo": "7000",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_884154-MLA32846176642_112019-F.webp",
+        "precio": 780,
+        "descripcion": "Su diseño eficaz hace de este mouse un elemento cómodo, con una gran experiencia de uso para aquella persona que busca una seguridad en cada click.",
+        "detalle":{
+            "Tipo": "Convencional",
+            "Sensor": "Optico",
+            "Resolucion": "1200dpi",
+            "Interfaces": "USB",
+            "Inalambrico":"si",
+            "Alcance":"10m",
+            "Botones": "3",
+            "Rueda": "1",
+            "Radio": "2.4 GHz",
+            "Color":"Spring green",
+            "Cable":"no"  
+            },
+        "cantidad":32
+        },
+        {
+            "id": "ME83",
+            "marca": "Xtrike-me",
+            "linea": "GM",
+            "modelo": "203",
+            "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_710624-MLA43279444332_082020-F.webp",
+            "precio": 1030,
+            "descripcion": "La funcionalidad al alcance de tu mano: El sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa y sensible que en los sistemas tradicionales. Con sus 6 botones podrás tener mayor control e independencia para ejecutar.",
+            "detalle":{
+                "Tipo": "Convencional",
+                "Sensor": "Optico",
+                "Resolucion": "2400dpi",
+                "Interfaces": "USB",
+                "Inalambrico":"no",
+                "Alcance":"1.5m",
+                "Botones": "6",
+                "Rueda": "1",
+                "Radio": "2.4 GHz",
+                "Color":"Negro",
+                "Cable":"si" 
+                },
+            "cantidad":32
+            }  
+]
