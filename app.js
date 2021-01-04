@@ -6,7 +6,7 @@ let articulosAcumulados = 0;
     //identificando botones de AGREGAR de cada producto
 const pescarBtnAgregar = (data,steps) => {
     let botones = document.querySelectorAll('button#agregarACarrito');
-    console.log(botones)
+   // console.log(botones)
         //recorro los botones esperando el evento
     botones.forEach(btn =>{
         btn.addEventListener('click', ()=>{
@@ -14,7 +14,7 @@ const pescarBtnAgregar = (data,steps) => {
             let producto = data.find(item => item.id === btn.dataset.id);
             
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
-                console.log(producto.id)
+                //console.log(producto.id)
                 producto.cantidad++;                    //incremento cantidad de producto
             }
             else{
@@ -23,11 +23,13 @@ const pescarBtnAgregar = (data,steps) => {
             }
             carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad    
             cargarBodyCarrito();
-            stepper2.next();
-            pescarSteps(steps);
-            
+            nextCarrito(steps)
+           // stepper2.next();
+           // pescarSteps(steps)        // json de pasos, 0=default 1=para if recargar datos. 
+
         })
     })
+
 }
 
 let items = document.querySelector('#items') //Capturamos donde vamos a pintar el carrito.
@@ -154,7 +156,7 @@ const btnAccionesCarrito = () =>{
                 if(producto.cantidad === 0){
                     //elimino el objeto creado con el ID
                     delete carrito[btn.dataset.id];   
-                    console.log(carrito);
+                    //console.log(carrito);
                 }
                 else{
                     carrito[btn.dataset.id] = {...producto}         //Propago las propiedates
@@ -230,7 +232,7 @@ $(document).on("click",(e)=> {
     //console.log(var1)
      if((!(var1.is(e.target)) && var1.has(e.target).length === 0)) { 
         //alert("¡Pulsaste fuera!");     
-        console.log("entro a colapse 1")  
+        //console.log("entro a colapse 1")  
         //$('.collapse').collapse('hide')
      } 
 });

@@ -29,6 +29,7 @@ const fetchData = async(url) => {     //consumir json
 
         const resStep =await fetch('assets/data/steps.json');
         const steps = await resStep.json();
+        
         pescarBtnAgregar(data,steps);
         pescarSteps(steps);
 
@@ -40,49 +41,65 @@ const fetchData = async(url) => {     //consumir json
 } 
 
       /* ESCRIBIR */
-       function pescarSteps(steps){
-  let btnPasos = document.querySelectorAll('#stepper2 .step')
+function pescarSteps(steps){
+
+let btnPasos = document.querySelectorAll('#stepper2 .step') 
     btnPasos.forEach(btn =>{
         btn.addEventListener('click', ()=>{
-
             let paso = steps.find(item => item.step === btn.dataset.target); //controlo que exista
-        
-            //console.log(paso.step)
-            let selector = paso.step.slice(0,3)+ "e"
-            //console.log(selector) ///para armar selector para escribir
-            //let selector = paso.step
-            document.querySelector(selector).innerHTML = ""; //---> limpio para luego reescribir
             
-           //llamo Json 
-           $.ajax({
-            url: paso.url,
-            success: function(respuesta) {
-                //console.log(respuesta);
-                writeCardHtml(respuesta,selector);
-                pescarBtnAgregar(respuesta);
-            },
-            error: function() {
-                console.log("No se ha podido obtener la información");
-                document.querySelector(selector).innerHTML = "Lo siento!, no se han encontrado Datos"; 
-            }
-        });
+            let selector = paso.step.slice(0,3)+ "e" ///para armar selector para escribir  
+            
+            document.querySelector(selector).innerHTML = ""; //---> limpio para luego reescribir
+            llamoJson(paso.url,selector,steps); //llamo Json
             
         })
-
-
     })
 } 
+function nextCarrito(p){
+    let x = document.querySelector('#stepper2 .step.active');
+    let target = x.dataset.target;
+   
+        for (const k in p) {
+                let element = p[k];
+               if(target<element.step){
+                    //console.log(`${element.step}e`)
+                    let selector = `${element.step}e` ///para armar selector para escribir
+                    llamoJson(element.url,selector,p)
+                    stepper2.next();
+                } 
+            
+        }
 
-    
+}
+
+
+function llamoJson(Url,s,p){ //url json, selector donde escribir 
+    console.log("entre el llamoJson")
+    $.ajax({
+        url: Url,
+        success: function(r) {
+            //console.log(respuesta);
+            writeCardHtml(r,s);
+            pescarBtnAgregar(r,p);
+        },
+        error: function() {
+            console.log("No se ha podido obtener la información");
+            document.querySelector(s).innerHTML = "Lo siento!, no se han encontrado Datos"; 
+        }
+    });
+}
+
 function writeCardHtml(data,selector){
     // limpio el child si existe --> Control
-    let a = `${selector} .grid-fluid.p-1`
+  /*   let a = `${selector} .grid-fluid.p-1`
     //console.log(a) 
-    if($(a).length) { 
+    if($(a).length>0) { 
         let padre = document.querySelector(selector)
         let hijo = document.querySelectorAll(".grid-fluid.p-1")
         padre.removeChild(hijo); 
-    } 
+        console.log("borre child")
+    }  */
 
     let cardProducto = document.querySelector(selector) //capturo donde voy a escribir creando un children
     let template = document.querySelector('#templateProductos').content; // tomo template (Html que voy a usar para escribir)
@@ -108,7 +125,7 @@ function writeCardHtml(data,selector){
                 
                         //Armo detalle
                 template.querySelector("div.row.d-flex.justify-content-between").setAttribute("id",`${producto.id}d`)
-                console.log(template)  
+                //console.log(template)  
                 template.querySelector(`#${producto.id}d`).innerHTML = ""; //limpio              
                 for (const key in producto.detalle) {
                     if (Object.hasOwnProperty.call (producto.detalle, key)) {
