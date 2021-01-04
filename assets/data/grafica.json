@@ -1,0 +1,86 @@
+[
+    {
+        "id": "GR31",
+        "marca": "MSI",
+        "linea": "Gaming X",
+        "modelo": "GTX 1650 SUPER",
+        "Color":"Black",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_806003-MLA43610347100_092020-F.webp",
+        "precio": 29860,
+        "descripcion": "Nvidia es líder de placas de video, su calidad asegura una experiencia positiva en tu computadora. Sus procesadores usan tecnología de punta, vas a disfrutar un producto veloz y duradero.",
+        "detalle":{
+          "Fabricante": "Nvidia",
+          "Tecnología": "GDDR5",
+          "Modelo": "GTX 1650 SUPER",
+          "Memoria":"4GB",
+          "Velocidad de Memoria":"12000 MHz",
+          "Bus":"128 bit",
+          "Nucleos":"1280",
+          "Frecuencia Nucleo":"1755 MHz",
+          "Interfaz":"PCI-Express 3.0",
+          "Conectividad": "HDMI,DisplayPort",
+          "Resolución máxima":"7680x4320",
+          "Máxima de monitores": "4",
+          "OpenGL": "si",
+          "Requerimiento Energetico":"350W"
+          
+          },
+        "cantidad": 3
+      },
+      {
+        "id": "GR32",
+        "marca": "MSI",
+        "linea": "Aero",
+        "modelo": "GTX 1650",
+        "Color":"Black",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_806003-MLA43610347100_092020-F.webp",
+        "precio": 26019,
+        "descripcion": "Nvidia es líder de placas de video, su calidad asegura una experiencia positiva en tu computadora. Sus procesadores usan tecnología de punta, vas a disfrutar un producto veloz y duradero.",
+        "detalle":{
+          "Fabricante": "Nvidia",
+          "Tecnología": "GDDR5",
+          "Modelo": "GTX 1650 SUPER",
+          "Memoria":"4GB",
+          "Velocidad de Memoria":"8000 MHz",
+          "Bus":"128 bit",
+          "Nucleos":"896",
+          "Frecuencia Nucleo":"1740 MHz",
+          "Interfaz":"PCI-Express 3.0",
+          "Conectividad": "HDMI,DisplayPort",
+          "Resolución máxima":"7680x4320",
+          "Máxima de monitores": "3",
+          "OpenGL": "si",
+          "Requerimiento Energetico":"300W"
+          
+          },
+        "cantidad": 7
+      },
+      {
+        "id": "GR33",
+        "marca": "ASRock",
+        "linea": "Phantom Gaming D",
+        "modelo": "RX 570",
+        "Color":"Black",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_739595-MLA32096291641_092019-F.webp",
+        "precio": 30400,
+        "descripcion": "Criterio fundamental a la hora de elegir tu placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te hará ver hasta los detalles más ínfimos en cada ilustración.",
+        "detalle":{
+          "Fabricante": "AMD",
+          "Tecnología": "GDDR5",
+          "Modelo": "RX 570",
+          "Memoria":"8GB",
+          "Velocidad de Memoria":"7000 MHz",
+          "Bus":"256 bit",
+          "Nucleos":"2048",
+          "Frecuencia Nucleo":"1255 MHz",
+          "Interfaz":"PCI-Express 3.0",
+          "Conectividad": "DL-DVI-D, HDMI, DisplayPort",
+          "Resolución máxima":"7680x4320",
+          "Máxima de monitores": "5",
+          "OpenGL": "si",
+          "Requerimiento Energetico":"500W"
+          
+          },
+        "cantidad": 17
+      }
+]
