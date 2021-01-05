@@ -5,7 +5,7 @@
         "linea": "Ryzen 5",
         "modelo": "3400G",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_764886-MLA40182374137_122019-F.webp",
-        "precio": "19286.6548",
+        "precio": 19286.65,
         "descripcion": "Clave en el rendimiento de computadoras de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones: ahora todas las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
         "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-gamer-amd-ryzen-5-3400g-yd3400c5fhbox-de-4-nucleos-y-37ghz-de-frecuencia-con-grafica-integrada/p/MLA15100869?pdp_filters=seller_id:215299808#searchVariation=MLA15100869&position=1&type=product&tracking_id=61251eb7-d9c9-4e6d-b97b-4e00c4db13e6",
         "detalle":{
@@ -36,7 +36,7 @@
         "linea": "Ryzen 5",
         "modelo": "2600",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_935497-MLA42157659427_062020-O.webp",
-        "precio": 16949,
+        "precio": 16949.99,
         "descripcion": "Si es Ryzen, es superioridad tecnológica. Este modelo Ryzen 5 2600 reúne toda las características para que juegues, te diviertas y trabajes en el mismo dispositivo. Cuenta con 6 núcleos que facilitan y permiten ejecutar diversos programas con fluidez y capacidad de respuesta. Producto apto para desarrolladores y fanáticos del gaming.",
         "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-gamer-amd-ryzen-5-2600-yd2600bbafbox-de-6-nucleos-y-34ghz-de-frecuencia/p/MLA9196241#searchVariation=MLA9196241&position=2&type=product&tracking_id=b5c6e057-8693-4754-8d97-9db3d26bd4a7",
         "detalle":{
@@ -67,7 +67,7 @@
       "linea": "Ryzen 7",
       "modelo": "3800X",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_605846-MLA40220089011_122019-F.webp",
-      "precio": 46189,
+      "precio": 46189.12,
       "descripcion": "Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil, ¡descubrí el abanico de posibilidades que esta función te ofrece!",
       "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-gamer-amd-ryzen-5-3400g-yd3400c5fhbox-de-4-nucleos-y-37ghz-de-frecuencia-con-grafica-integrada/p/MLA15100869?pdp_filters=seller_id:215299808#searchVariation=MLA15100869&position=1&type=product&tracking_id=61251eb7-d9c9-4e6d-b97b-4e00c4db13e6",
       "detalle":{
@@ -98,7 +98,7 @@
       "linea": "Ryzen 5",
       "modelo": "5600X",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_806834-MLA44347094824_122020-F.webp",
-      "precio": 43999,
+      "precio": 43999.84,
       "descripcion": "Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil, ¡descubrí el abanico de posibilidades que esta función te ofrece!",
       "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-gamer-amd-ryzen-5-3400g-yd3400c5fhbox-de-4-nucleos-y-37ghz-de-frecuencia-con-grafica-integrada/p/MLA15100869?pdp_filters=seller_id:215299808#searchVariation=MLA15100869&position=1&type=product&tracking_id=61251eb7-d9c9-4e6d-b97b-4e00c4db13e6",
       "detalle":{
@@ -129,7 +129,7 @@
       "linea": "Ryzen 3",
       "modelo": "2200G",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_884972-MLA40182457265_122019-F.webp",
-      "precio": 43999,
+      "precio": 43999.98,
       "descripcion": "Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil, ¡descubrí el abanico de posibilidades que esta función te ofrece!",
       "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-gamer-amd-ryzen-3-2200g-yd2200c5fbbox-de-4-nucleos-y-35ghz-de-frecuencia-con-grafica-integrada/p/MLA15041858#searchVariation=MLA15041858&position=17&type=product&tracking_id=b5c6e057-8693-4754-8d97-9db3d26bd4a7",
       "detalle":{
@@ -160,7 +160,7 @@
       "linea": "Core i3",
       "modelo": "i3-9100",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_686610-MLA41422930702_042020-F.webp",
-      "precio": 12789,
+      "precio": 12789.47,
       "descripcion": "Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
       "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-gamer-amd-ryzen-3-2200g-yd2200c5fbbox-de-4-nucleos-y-35ghz-de-frecuencia-con-grafica-integrada/p/MLA15041858#searchVariation=MLA15041858&position=17&type=product&tracking_id=b5c6e057-8693-4754-8d97-9db3d26bd4a7",
       "detalle":{
@@ -192,7 +192,7 @@
       "linea": "Pentium Gold",
       "modelo": "G5420",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_878304-MLA43004686169_082020-F.webp",
-      "precio": 7349,
+      "precio": 7349.10,
       "descripcion": "Útil para uso doméstico y trabajo de oficina liviano, como así también para utilizar algunos programas más avanzados.",
       "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-intel-pentium-gold-g5420-bx80684g5420-de-2-nucleos-y-38ghz-de-frecuencia-con-grafica-integrada/p/MLA15915917#reco_item_pos=2&reco_backend=machinalis-pdp&reco_backend_type=low_level&reco_client=pdp-v2p&reco_id=70831365-7012-4efd-8815-b9dd8b40038c",
       "detalle":{
@@ -225,7 +225,7 @@
       "linea": "Core i5",
       "modelo": "i5-9400F",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_987093-MLA32213641856_092019-F.webp",
-      "precio": 16599,
+      "precio": 16599.00,
       "descripcion": "Productividad y entretenimiento, todo disponible en computadoras de escritorio. La superioridad tecnológica de Intel es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos.",
       "linkMercadolibre": "https://www.mercadolibre.com.ar/procesador-intel-pentium-gold-g5420-bx80684g5420-de-2-nucleos-y-38ghz-de-frecuencia-con-grafica-integrada/p/MLA15915917#reco_item_pos=2&reco_backend=machinalis-pdp&reco_backend_type=low_level&reco_client=pdp-v2p&reco_id=70831365-7012-4efd-8815-b9dd8b40038c",
       "detalle":{

@@ -6,7 +6,7 @@
         "modelo": "GTX 1650 SUPER",
         "Color":"Black",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_806003-MLA43610347100_092020-F.webp",
-        "precio": 29860,
+        "precio": 29860.01,
         "descripcion": "Nvidia es líder de placas de video, su calidad asegura una experiencia positiva en tu computadora. Sus procesadores usan tecnología de punta, vas a disfrutar un producto veloz y duradero.",
         "detalle":{
           "Fabricante": "Nvidia",
@@ -34,7 +34,7 @@
         "modelo": "GTX 1650",
         "Color":"Black",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_806003-MLA43610347100_092020-F.webp",
-        "precio": 26019,
+        "precio": 26019.22,
         "descripcion": "Nvidia es líder de placas de video, su calidad asegura una experiencia positiva en tu computadora. Sus procesadores usan tecnología de punta, vas a disfrutar un producto veloz y duradero.",
         "detalle":{
           "Fabricante": "Nvidia",
@@ -62,7 +62,7 @@
         "modelo": "RX 570",
         "Color":"Black",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_739595-MLA32096291641_092019-F.webp",
-        "precio": 30400,
+        "precio": 30400.69,
         "descripcion": "Criterio fundamental a la hora de elegir tu placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te hará ver hasta los detalles más ínfimos en cada ilustración.",
         "detalle":{
           "Fabricante": "AMD",

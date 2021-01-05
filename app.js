@@ -221,7 +221,6 @@ let width = $(window).width();
 
 ///-----PESCAR CLICK -----$(window).on('click', (e)=>{}///
 
-
 ///---------------------------CONFIGURAR COLLAPSE CARRITO----------------------------------///
 
 $(document).on("click",(e)=> {               

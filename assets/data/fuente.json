@@ -5,7 +5,7 @@
     "linea": "Phantom Gaming D",
     "modelo": "PX550-FS",
     "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_780093-MLA44320906090_122020-F.webp",
-    "precio": 3599,
+    "precio": 3599.33,
     "descripcion": "Las fuentes de alimentación para PC LNZ garantizan potencia continua en todas sus lineas de +12V, +5V, +3.3V, de manera constante y estable. La fuente cuenta con un silencioso fan cooler de 80mm de diámetro, para garantizar la correcta refrigeración de todos sus componentes internos. Las Fuentes LNZ son completamente compatibles con todos los nuevos procesadores tanto de la linea de Intel como de la Linea AMD Ryzen",
     "detalle":{
       "Tipo": "ATX",
@@ -34,7 +34,7 @@
         "linea": "Bronze",
         "modelo": "PSAZ-650W",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_800055-MLA43325707236_082020-F.webp",
-        "precio": 9499,
+        "precio": 9499.10,
         "descripcion": "Criterio fundamental a la hora de elegir tu placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te hará ver hasta los detalles más ínfimos en cada ilustración.",
         "detalle":{
           "Tipo": "ATX",
@@ -64,7 +64,7 @@
             "linea": "RPGS",
             "modelo": "Redragon RPGS GC-PS002",
             "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_993234-MLA42850006293_072020-F.webp",
-            "precio": 8999,
+            "precio": 8999.99,
             "descripcion": "Criterio fundamental a la hora de elegir tu placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te hará ver hasta los detalles más ínfimos en cada ilustración.",
             "detalle":{
               "Tipo": "ATX",

@@ -5,7 +5,7 @@
     "linea": "bze 30 RGB",
     "modelo": "BZE-30",
     "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_610207-MLA44255873572_122020-F.webp",
-    "precio": 6999,
+    "precio": 6999.67,
     "descripcion": "Criterio fundamental a la hora de elegir tu placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te hará ver hasta los detalles más ínfimos en cada ilustración.",
     "detalle":{
         "Tipo": "Mid tower",
@@ -27,7 +27,7 @@
     "linea": "MasterBox",
     "modelo": "Q300L",
     "imagen": "https://http2.mlstatic.com/D_NQ_NP_898245-MLA31353261776_072019-O.webp",
-    "precio": 8762,
+    "precio": 8762.56,
     "descripcion": "",
     "detalle":{
         "Tipo": "Mid tower",
@@ -49,7 +49,7 @@
     "linea": "h100",
     "modelo": "MCM-H100-KANN-S00",
     "imagen": "https://http2.mlstatic.com/D_NQ_NP_633584-MLA43570155993_092020-O.webp",
-    "precio": 8489,
+    "precio": 8489.35,
     "descripcion": "La MasterCase H100 es una funda mini-ITX de tamaño conveniente que se puede configurar como una plataforma de juegos portátil, una pequeña PC de sala de estar y un protector de espacio de escritorio. Desde su construcción industrial hasta su panel frontal completamente de malla, el H100 encaja perfectamente en la serie como una alternativa de tamaño de viaje.",
     "detalle":{
         "Tipo": "Mid tower",
@@ -71,7 +71,7 @@
     "linea": "Matrexx",
     "modelo": "Matrexx 55",
     "imagen": "https://http2.mlstatic.com/D_NQ_NP_891519-MLA43778034483_102020-O.webp",
-    "precio": 15999,
+    "precio": 15999.47,
     "descripcion": "El gabinete Matrexx 55 V3 presenta un diseño ATX compacto con 2 paneles transparentes para lucir el interior de tu armado (Vidrio templado de 4mm en el panel lateral) y tomas de aire tanto en el panel frontal como en el superior, inferior y trasero para asegurar un flujo de aire máximo para la refrigeración de componentes.",
     "detalle":{
         "Tipo": "Mid tower",
