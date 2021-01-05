@@ -3,54 +3,72 @@
         "step":"#s1",
         "img":"assets/ico/svg/075-cpu-1.svg",
         "name": "Microprocesador",
-        "url": "assets/data/cpu.json"
+        "url": "assets/data/cpu.json",
+        "nurl": "assets/data/mother.json",
+        "next":"#s2"
     },
     {
         "step":"#s2",
         "img":"assets/ico/svg/070-motherboard.svg",
         "name": "Placa Madre",
-        "url": "assets/data/mother.json"
+        "url": "assets/data/mother.json",
+        "nurl": "assets/data/ram.json",
+        "next":"#s3"
     },
     {
         "step":"#s3",
         "img":"assets/ico/svg/088-ram-memory.svg",
         "name": "Memoria RAM",
-        "url": "assets/data/ram.json"
+        "url": "assets/data/ram.json",
+        "nurl": "assets/data/grafica.json",
+        "next":"#s4"
     },
     {
         "step":"#s4",
         "img":"assets/ico/svg/012-video-card.svg",
         "name": "Grafica",
-        "url": "assets/data/grafica.json"
+        "url": "assets/data/grafica.json",
+        "nurl": "assets/data/fuente.json",
+        "next":"#s5"
     },
     {
         "step":"#s5",
         "img":"assets/ico/svg/084-supply.svg",
         "name": "Fuente",
-        "url": "assets/data/fuente.json"
+        "url": "assets/data/fuente.json",
+        "nurl": "assets/data/gabinete.json",
+        "next":"#s6"
     },
     {
         "step":"#s6",
         "img":"assets/ico/svg/091-desktop.svg",
         "name": "Gabinete",
-        "url": "assets/data/gabinete.json"
+        "url": "assets/data/gabinete.json",
+        "nurl": "assets/data/pantalla.json",
+        "next":"#s7"
     },
     {
         "step":"#s7",
         "img":"assets/ico/svg/092-monitor.svg",
         "name": "Monitor",
-        "url": "assets/data/pantalla.json"
+        "url": "assets/data/pantalla.json",
+        "nurl": "assets/data/mouse.json",
+        "next":"#s8"
     },
     {
         "step":"#s8",
         "img":"assets/ico/svg/080-mouse.svg",
         "name": "Mouse",
-        "url": "assets/data/mouse.json"
+        "url": "assets/data/mouse.json",
+        "nurl": "assets/data/teclado.json",
+        "next":"#s9"
     },
     {
         "step":"#s9",
         "img":"assets/ico/svg/013-keyboard-1.svg",
         "name": "Teclado",
-        "url": "assets/data/teclado.json"
+        "url": "assets/data/teclado.json",
+        "nurl": "assets/data/cpu.json",
+        "next":"#s1"
     }
 ]

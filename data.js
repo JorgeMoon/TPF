@@ -25,11 +25,12 @@ const fetchData = async(url) => {     //consumir json
         const resData = await fetch(url);
         const data = await resData.json();
         let selector = "#s1e"
-        writeCardHtml(data,selector);
+        
 
         const resStep =await fetch('assets/data/steps.json');
         const steps = await resStep.json();
         
+        writeCardHtml(data,selector);
         pescarBtnAgregar(data,steps);
         pescarSteps(steps);
 
@@ -48,29 +49,30 @@ let btnPasos = document.querySelectorAll('#stepper2 .step')
         btn.addEventListener('click', ()=>{
             let paso = steps.find(item => item.step === btn.dataset.target); //controlo que exista
             
-            let selector = paso.step.slice(0,3)+ "e" ///para armar selector para escribir  
+            let selector = paso.step+"e" ///para armar selector para escribir  
             
             document.querySelector(selector).innerHTML = ""; //---> limpio para luego reescribir
-            llamoJson(paso.url,selector,steps); //llamo Json
-            
+            llamoJson(paso.url,selector,steps); //llamo Json  
         })
     })
 } 
 function nextCarrito(p){
+
+            //usar el p.next para cargar los siguietnes.
+
     let x = document.querySelector('#stepper2 .step.active');
     let target = x.dataset.target;
+     console.log(target)
    
-        for (const k in p) {
+         for (const k in p) {
                 let element = p[k];
-               if(target<element.step){
-                    //console.log(`${element.step}e`)
-                    let selector = `${element.step}e` ///para armar selector para escribir
-                    llamoJson(element.url,selector,p)
+               if(target===element.step){
+                    let selector = element.next+"e" ///para armar selector para escribir
+                    llamoJson(element.nurl,selector,p)
                     stepper2.next();
-                } 
-            
-        }
-
+                    break;  
+                }    
+        } 
 }
 
 
@@ -91,16 +93,6 @@ function llamoJson(Url,s,p){ //url json, selector donde escribir
 }
 
 function writeCardHtml(data,selector){
-    // limpio el child si existe --> Control
-  /*   let a = `${selector} .grid-fluid.p-1`
-    //console.log(a) 
-    if($(a).length>0) { 
-        let padre = document.querySelector(selector)
-        let hijo = document.querySelectorAll(".grid-fluid.p-1")
-        padre.removeChild(hijo); 
-        console.log("borre child")
-    }  */
-
     let cardProducto = document.querySelector(selector) //capturo donde voy a escribir creando un children
     let template = document.querySelector('#templateProductos').content; // tomo template (Html que voy a usar para escribir)
     let fragment = document.createDocumentFragment(); // otra opcion new DocumentFragment();
@@ -136,17 +128,12 @@ function writeCardHtml(data,selector){
 
                 let clone = template.cloneNode(true);
             
-            // console.log("este es un clon --> "+clone)
                 fragment.appendChild(clone);        //almaceno todo el contenido antes de escribirlo en el HTML
-            // console.log(fragment +"<-- framento")
-           
-            
+                 
         });
         cardProducto.appendChild(fragment); //escribo el html
         //console.log(cardProducto)
     };
 
 
-    /* CARRITO DA SIGUIENTE */
-
-   // stepper2.next()
+  

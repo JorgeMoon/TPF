@@ -11,22 +11,22 @@ const pescarBtnAgregar = (data,steps) => {
     botones.forEach(btn =>{
         btn.addEventListener('click', ()=>{
                 //busco dentro de data el producto, comparando el id de btn con item.id dentro del "data"
-            let producto = data.find(item => item.id === btn.dataset.id);
-            
+            let producto = data.find(item => item.id == btn.dataset.id);
             if(carrito.hasOwnProperty(producto.id)){        //si el objeto tiene el mismo ID
                 //console.log(producto.id)
                 producto.cantidad++;                    //incremento cantidad de producto
             }
             else{
-                producto.cantidad = Number(1);
-                
+                producto.cantidad = Number(1);   
             }
             carrito[producto.id] = {...producto}         //Operador de propagación - copio el producto identificado con anterioridad    
             cargarBodyCarrito();
+                //NEXT
+          /*   let paso = steps.find(item => item.step === btn.dataset.target); //controlo que exista
+                console.log(steps)
+                console.log(btn.dataset.target.slice(0,3)) */
             nextCarrito(steps)
-           // stepper2.next();
-           // pescarSteps(steps)        // json de pasos, 0=default 1=para if recargar datos. 
-
+           
         })
     })
 

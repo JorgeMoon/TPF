@@ -1,0 +1,70 @@
+[
+{
+    "id": "TC91",
+    "marca": "Nisuta",
+    "linea": "QWERTY",
+    "modelo": "NSKBG5RL",
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_889846-MLA43559112952_092020-F.webp",
+    "precio": 2630,
+    "descripcion": "Este teclado Nisuta de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo. Mejorá tu experiencia de gaming, ya seas un aficionado o todo un experto, y hacé que tus jugadas alcancen otro nivel.",
+    "detalle":{
+        "Arquitectura": "Semi-Mecánico",
+        "Interfaces": "USB",
+        "Retroiluminacion": "si",
+        "Inalambrico":"no",
+        "Alcance":"1,5m",
+        "Cantidad de Teclas": "104",
+        "Teclas rapidas": "si",
+        "Trackball": "no",
+        "Color":"Negro",
+        "Cable":"si"   
+        },
+    "cantidad":21
+    },
+    {
+        "id": "TC92",
+        "marca": "Genius",
+        "linea": "QWERTY",
+        "modelo": "NSKBG5RL",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_807047-MLA43710479913_102020-F.webp",
+        "precio": 2810,
+        "descripcion": "Este teclado Genius de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo. Mejorá tu experiencia de gaming, ya seas un aficionado o todo un experto, y hacé que tus jugadas alcancen otro nivel.",
+        "detalle":{
+            "Arquitectura": "Semi-Mecánico",
+            "Interfaces": "USB",
+            "Retroiluminacion": "7 Colores",
+            "Inalambrico":"no",
+            "Alcance":"1,8m",
+            "Cantidad de Teclas": "104",
+            "Teclas rapidas": "si",
+            "Trackball": "no",
+            "Color":"Negro",
+            "Cable":"si",
+            "Idioma":"Ingles US"   
+            },
+        "cantidad":11
+        },
+    {
+        "id": "TC93",
+        "marca": "Logitech",
+        "linea": "QWERTY",
+        "modelo": "K400 Plus",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_876979-MLA32722390626_102019-F.webp",
+        "precio": 2919,
+        "descripcion": "Este teclado Logitech es el mejor complemento para hacer todo tipo de actividades. Es cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.",
+        "detalle":{
+            "Arquitectura": "Membrana",
+            "Interfaces": "USB",
+            "Retroiluminacion": "si",
+            "Inalambrico":"no",
+            "Alcance":"1,5m",
+            "Cantidad de Teclas": "104",
+            "Teclas rapidas": "si",
+            "Trackball": "no",
+            "Color":"Negro",
+            "Cable":"si",
+            "Idioma":"Español" 
+            },
+        "cantidad":5
+        }
+]
